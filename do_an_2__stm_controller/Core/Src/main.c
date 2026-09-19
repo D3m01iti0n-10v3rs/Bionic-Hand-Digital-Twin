@@ -20,13 +20,18 @@
 #include "main.h"
 #include "cmsis_os.h"
 #include "usb_device.h"
+#include "usbd_cdc_if.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include <stdio.h>
+#include <string.h>
 #include "servo.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
+typedef StaticTask_t osStaticThreadDef_t;
+typedef StaticSemaphore_t osStaticMutexDef_t;
 /* USER CODE BEGIN PTD */
 typedef struct {
     uint8_t finger;
@@ -34,24 +39,23 @@ typedef struct {
 } ServoCommand_t;
 
 typedef struct {
-	uint32_t angle1;
-	uint32_t angle2;
-	uint32_t angle3;
-	uint32_t angle4;
-	uint32_t angle5;
+	uint8_t angle;
+	uint8_t target_angle;
 } SensorData_t;
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-#define FINGER1_CHANNEL 1
-#define FINGER2_CHANNEL 2
-#define FINGER3_CHANNEL 3
-#define FINGER4_CHANNEL 4
-#define FINGER5_CHANNEL 1
+#define FINGER1_CHANNEL TIM_CHANNEL_1
+#define FINGER2_CHANNEL TIM_CHANNEL_2
+#define FINGER3_CHANNEL TIM_CHANNEL_3
+#define FINGER4_CHANNEL TIM_CHANNEL_4
+#define FINGER5_CHANNEL TIM_CHANNEL_1
 
 #define ANGLE_STEP 1
 #define SERVO_UPDATE_INTERVAL 10
+
+#define SAMPLING_INTERVAL 5
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -65,27 +69,54 @@ TIM_HandleTypeDef htim3;
 
 /* Definitions for comsTask */
 osThreadId_t comsTaskHandle;
+uint32_t comsTaskBuffer[ 512 ];
+osStaticThreadDef_t comsTaskControlBlock;
 const osThreadAttr_t comsTask_attributes = {
   .name = "comsTask",
-  .stack_size = 256 * 4,
+  .cb_mem = &comsTaskControlBlock,
+  .cb_size = sizeof(comsTaskControlBlock),
+  .stack_mem = &comsTaskBuffer[0],
+  .stack_size = sizeof(comsTaskBuffer),
   .priority = (osPriority_t) osPriorityNormal,
 };
 /* Definitions for servoTask */
 osThreadId_t servoTaskHandle;
+uint32_t servoTaskBuffer[ 128 ];
+osStaticThreadDef_t servoTaskControlBlock;
 const osThreadAttr_t servoTask_attributes = {
   .name = "servoTask",
-  .stack_size = 128 * 4,
+  .cb_mem = &servoTaskControlBlock,
+  .cb_size = sizeof(servoTaskControlBlock),
+  .stack_mem = &servoTaskBuffer[0],
+  .stack_size = sizeof(servoTaskBuffer),
   .priority = (osPriority_t) osPriorityLow,
 };
 /* Definitions for sensorTask */
 osThreadId_t sensorTaskHandle;
+uint32_t sensorTaskBuffer[ 512 ];
+osStaticThreadDef_t sensorTaskControlBlock;
 const osThreadAttr_t sensorTask_attributes = {
   .name = "sensorTask",
-  .stack_size = 128 * 4,
+  .cb_mem = &sensorTaskControlBlock,
+  .cb_size = sizeof(sensorTaskControlBlock),
+  .stack_mem = &sensorTaskBuffer[0],
+  .stack_size = sizeof(sensorTaskBuffer),
   .priority = (osPriority_t) osPriorityNormal,
 };
+/* Definitions for finger_data_mutex */
+osMutexId_t finger_data_mutexHandle;
+osStaticMutexDef_t finger_data_mutexControlBlock;
+const osMutexAttr_t finger_data_mutex_attributes = {
+  .name = "finger_data_mutex",
+  .cb_mem = &finger_data_mutexControlBlock,
+  .cb_size = sizeof(finger_data_mutexControlBlock),
+};
 /* USER CODE BEGIN PV */
+osSemaphoreId_t sensorSemHandle;
+
 osMessageQueueId_t servoCmdQueue;
+Servo_t fingers[5];
+SensorData_t finger_data[5];
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -138,18 +169,27 @@ int main(void)
   MX_TIM2_Init();
   MX_TIM3_Init();
   /* USER CODE BEGIN 2 */
+  MX_USB_DEVICE_Init();
 
+  fingers[0] = ServoInit(&htim2, FINGER1_CHANNEL, 90);
+  fingers[1] = ServoInit(&htim2, FINGER2_CHANNEL, 90);
+  fingers[2] = ServoInit(&htim2, FINGER3_CHANNEL, 90);
+  fingers[3] = ServoInit(&htim2, FINGER4_CHANNEL, 90);
+  fingers[4] = ServoInit(&htim3, FINGER5_CHANNEL, 90);
   /* USER CODE END 2 */
 
   /* Init scheduler */
   osKernelInitialize();
+  /* Create the mutex(es) */
+  /* creation of finger_data_mutex */
+  finger_data_mutexHandle = osMutexNew(&finger_data_mutex_attributes);
 
   /* USER CODE BEGIN RTOS_MUTEX */
   /* add mutexes, ... */
   /* USER CODE END RTOS_MUTEX */
 
   /* USER CODE BEGIN RTOS_SEMAPHORES */
-  /* add semaphores, ... */
+  sensorSemHandle = osSemaphoreNew(1, 0, NULL);
   /* USER CODE END RTOS_SEMAPHORES */
 
   /* USER CODE BEGIN RTOS_TIMERS */
@@ -157,7 +197,7 @@ int main(void)
   /* USER CODE END RTOS_TIMERS */
 
   /* USER CODE BEGIN RTOS_QUEUES */
-  /* add queues, ... */
+  servoCmdQueue = osMessageQueueNew(16, sizeof(ServoCommand_t), NULL);
   /* USER CODE END RTOS_QUEUES */
 
   /* Create the thread(s) */
@@ -262,7 +302,7 @@ static void MX_TIM2_Init(void)
   htim2.Instance = TIM2;
   htim2.Init.Prescaler = 71;
   htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim2.Init.Period = 999;
+  htim2.Init.Period = 19999;
   htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim2.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_ENABLE;
   if (HAL_TIM_Base_Init(&htim2) != HAL_OK)
@@ -333,7 +373,7 @@ static void MX_TIM3_Init(void)
   htim3.Instance = TIM3;
   htim3.Init.Prescaler = 71;
   htim3.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim3.Init.Period = 999;
+  htim3.Init.Period = 19999;
   htim3.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim3.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_ENABLE;
   if (HAL_TIM_Base_Init(&htim3) != HAL_OK)
@@ -404,7 +444,6 @@ static void MX_GPIO_Init(void)
 void StartComstTask(void *argument)
 {
   /* init code for USB_DEVICE */
-  MX_USB_DEVICE_Init();
   /* USER CODE BEGIN 5 */
   /* Infinite loop */
   for(;;)
@@ -433,33 +472,22 @@ void StartComstTask(void *argument)
 void StartServoTask(void *argument)
 {
   /* USER CODE BEGIN StartServoTask */
-  Servo_t finger1, finger2, finger3, finger4, finger5;
-  finger1 = ServoInit(&htim2, FINGER1_CHANNEL, 90);
-  finger2 = ServoInit(&htim2, FINGER2_CHANNEL, 90);
-  finger3 = ServoInit(&htim2, FINGER3_CHANNEL, 90);
-  finger4 = ServoInit(&htim2, FINGER4_CHANNEL, 90);
-  finger5 = ServoInit(&htim3, FINGER5_CHANNEL, 90);
+
   /* Infinite loop */
   for(;;)
   {
-	ServoCommand_t cmd;
-	//if (osMessageQueueGet(servoCmdQueue, &cmd, NULL, osWaitForever)){
-	if (osMessageQueueGet(servoCmdQueue, &cmd, NULL, 0) == osOK){
-		switch (cmd.finger){
-			case 1:
-				ServoMoveStep(&finger1, cmd.angle, ANGLE_STEP); break;
-			case 2:
-				ServoMoveStep(&finger2, cmd.angle, ANGLE_STEP); break;
-			case 3:
-				ServoMoveStep(&finger3, cmd.angle, ANGLE_STEP); break;
-			case 4:
-				ServoMoveStep(&finger4, cmd.angle, ANGLE_STEP); break;
-			case 5:
-				ServoMoveStep(&finger5, cmd.angle, ANGLE_STEP); break;
-		}
-	}
+      ServoCommand_t cmd;
+      osMutexAcquire(finger_data_mutexHandle, osWaitForever);
 
-    osDelay(SERVO_UPDATE_INTERVAL);
+      while (osMessageQueueGet(servoCmdQueue, &cmd, NULL, 0) == osOK) {
+          if (cmd.finger < 5) fingers[cmd.finger].target_angle = (cmd.angle > 180) ? 180 : cmd.angle;
+      }
+
+      for (uint8_t i = 0; i < 5; i++) ServoMoveStep(&fingers[i], fingers[i].target_angle, ANGLE_STEP);
+
+      osMutexRelease(finger_data_mutexHandle);
+      osSemaphoreRelease(sensorSemHandle);
+      osDelay(SERVO_UPDATE_INTERVAL);
   }
   /* USER CODE END StartServoTask */
 }
@@ -473,14 +501,33 @@ void StartServoTask(void *argument)
 /* USER CODE END Header_StartSensorTask */
 void StartSensorTask(void *argument)
 {
-  /* USER CODE BEGIN StartSensorTask */
+    char buffer[64];
 
-  /* Infinite loop */
-  for(;;)
-  {
-    osDelay(1);
-  }
-  /* USER CODE END StartSensorTask */
+    for(;;)
+    {
+    	osSemaphoreAcquire(sensorSemHandle, osWaitForever);
+        osMutexAcquire(finger_data_mutexHandle, osWaitForever);
+
+        for (uint8_t i = 0; i < 5; i++)
+        {
+            finger_data[i].angle = GetServoAngle(&fingers[i]);
+            finger_data[i].target_angle = GetServoTargetAngle(&fingers[i]);
+        }
+
+        osMutexRelease(finger_data_mutexHandle);
+
+        snprintf(buffer, sizeof(buffer),
+                 "%d,%d,%d,%d,%d,%d,%d,%d,%d,%d\r\n",
+                 finger_data[0].angle, finger_data[0].target_angle,
+                 finger_data[1].angle, finger_data[1].target_angle,
+                 finger_data[2].angle, finger_data[2].target_angle,
+                 finger_data[3].angle, finger_data[3].target_angle,
+                 finger_data[4].angle, finger_data[4].target_angle);
+
+        //CDC_Transmit_FS((uint8_t *)buffer, strlen(buffer));
+
+        //osDelay(SAMPLING_INTERVAL);
+    }
 }
 
 /**
