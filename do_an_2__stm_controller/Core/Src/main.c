@@ -49,6 +49,9 @@ typedef struct {
 #define FINGER3_CHANNEL 3
 #define FINGER4_CHANNEL 4
 #define FINGER5_CHANNEL 1
+
+#define ANGLE_STEP 1
+#define SERVO_UPDATE_INTERVAL 10
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -440,21 +443,23 @@ void StartServoTask(void *argument)
   for(;;)
   {
 	ServoCommand_t cmd;
-	if (osMessageQueueGet(servoCmdQueue, &cmd, NULL, osWaitForever)){
+	//if (osMessageQueueGet(servoCmdQueue, &cmd, NULL, osWaitForever)){
+	if (osMessageQueueGet(servoCmdQueue, &cmd, NULL, 0) == osOK){
 		switch (cmd.finger){
 			case 1:
-				ServoWrite(&finger1, cmd.angle); break;
+				ServoMoveStep(&finger1, cmd.angle, ANGLE_STEP); break;
 			case 2:
-				ServoWrite(&finger2, cmd.angle); break;
+				ServoMoveStep(&finger2, cmd.angle, ANGLE_STEP); break;
 			case 3:
-				ServoWrite(&finger3, cmd.angle); break;
+				ServoMoveStep(&finger3, cmd.angle, ANGLE_STEP); break;
 			case 4:
-				ServoWrite(&finger4, cmd.angle); break;
+				ServoMoveStep(&finger4, cmd.angle, ANGLE_STEP); break;
 			case 5:
-				ServoWrite(&finger5, cmd.angle); break;
+				ServoMoveStep(&finger5, cmd.angle, ANGLE_STEP); break;
 		}
 	}
-    osDelay(1);
+
+    osDelay(SERVO_UPDATE_INTERVAL);
   }
   /* USER CODE END StartServoTask */
 }
