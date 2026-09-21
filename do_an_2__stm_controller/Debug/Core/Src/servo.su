@@ -1,3 +1,5 @@
 ../Core/Src/servo.c:10:9:ServoInit	48	static
 ../Core/Src/servo.c:17:6:ServoWrite	24	static
-../Core/Src/servo.c:25:9:GetServoAngle	16	static
+../Core/Src/servo.c:27:6:ServoMoveStep	16	static
+../Core/Src/servo.c:42:9:GetServoAngle	16	static
+../Core/Src/servo.c:46:9:GetServoTargetAngle	16	static

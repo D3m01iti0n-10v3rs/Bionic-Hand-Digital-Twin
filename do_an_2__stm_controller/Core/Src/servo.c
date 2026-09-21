@@ -18,7 +18,8 @@ void ServoWrite(Servo_t *Servo, uint8_t angle){
     if (angle > 180) angle = 180;
     Servo->angle = angle;
 
-    uint32_t pulse = 1000 + (Servo->angle * 1000) / 180;
+    //uint32_t pulse = 1000 + (Servo->angle * 1000) / 180;
+    uint32_t pulse = 500 + ((uint32_t)Servo->angle * 2000) / 180;
     __HAL_TIM_SET_COMPARE(Servo->htim, Servo->channel, pulse);
 }
 
