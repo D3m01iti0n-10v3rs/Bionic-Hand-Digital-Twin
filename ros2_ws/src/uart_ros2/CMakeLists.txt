@@ -9,6 +9,7 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
+find_package(Threads REQUIRED)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
@@ -27,6 +28,10 @@ add_executable(uart_node src/uart_node.cpp)
 ament_target_dependencies(uart_node
   rclcpp
   std_msgs
+)
+
+target_link_libraries(uart_node
+  Threads::Threads
 )
 
 install(TARGETS
