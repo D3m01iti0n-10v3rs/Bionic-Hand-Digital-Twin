@@ -1,0 +1,25 @@
+[0.129s] Invoking command in '/home/soppo/ros2_ws/build/uart_ros2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/soppo/ros2_ws/build/uart_ros2 -- -j12 -l12
+[1.384s] [ 50%] [32mBuilding CXX object CMakeFiles/uart_node.dir/src/uart_node.cpp.o[0m
+[29.949s] [100%] [32m[1mLinking CXX executable uart_node[0m
+[32.049s] [100%] Built target uart_node
+[32.133s] Invoked command in '/home/soppo/ros2_ws/build/uart_ros2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/soppo/ros2_ws/build/uart_ros2 -- -j12 -l12
+[32.217s] Invoking command in '/home/soppo/ros2_ws/build/uart_ros2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/soppo/ros2_ws/build/uart_ros2
+[32.249s] -- Install configuration: ""
+[32.255s] -- Installing: /home/soppo/ros2_ws/install/uart_ros2/lib/uart_ros2/uart_node
+[32.278s] -- Set non-toolchain portion of runtime path of "/home/soppo/ros2_ws/install/uart_ros2/lib/uart_ros2/uart_node" to ""
+[32.278s] -- Up-to-date: /home/soppo/ros2_ws/install/uart_ros2/share/ament_index/resource_index/package_run_dependencies/uart_ros2
+[32.278s] -- Up-to-date: /home/soppo/ros2_ws/install/uart_ros2/share/ament_index/resource_index/parent_prefix_path/uart_ros2
+[32.279s] -- Up-to-date: /home/soppo/ros2_ws/install/uart_ros2/share/uart_ros2/environment/ament_prefix_path.sh
+[32.280s] -- Up-to-date: /home/soppo/ros2_ws/install/uart_ros2/share/uart_ros2/environment/ament_prefix_path.dsv
+[32.280s] -- Up-to-date: /home/soppo/ros2_ws/install/uart_ros2/share/uart_ros2/environment/path.sh
+[32.282s] -- Up-to-date: /home/soppo/ros2_ws/install/uart_ros2/share/uart_ros2/environment/path.dsv
+[32.282s] -- Up-to-date: /home/soppo/ros2_ws/install/uart_ros2/share/uart_ros2/local_setup.bash
+[32.282s] -- Up-to-date: /home/soppo/ros2_ws/install/uart_ros2/share/uart_ros2/local_setup.sh
+[32.282s] -- Up-to-date: /home/soppo/ros2_ws/install/uart_ros2/share/uart_ros2/local_setup.zsh
+[32.283s] -- Up-to-date: /home/soppo/ros2_ws/install/uart_ros2/share/uart_ros2/local_setup.dsv
+[32.283s] -- Installing: /home/soppo/ros2_ws/install/uart_ros2/share/uart_ros2/package.dsv
+[32.289s] -- Up-to-date: /home/soppo/ros2_ws/install/uart_ros2/share/ament_index/resource_index/packages/uart_ros2
+[32.289s] -- Up-to-date: /home/soppo/ros2_ws/install/uart_ros2/share/uart_ros2/cmake/uart_ros2Config.cmake
+[32.289s] -- Up-to-date: /home/soppo/ros2_ws/install/uart_ros2/share/uart_ros2/cmake/uart_ros2Config-version.cmake
+[32.289s] -- Up-to-date: /home/soppo/ros2_ws/install/uart_ros2/share/uart_ros2/package.xml
+[32.298s] Invoked command in '/home/soppo/ros2_ws/build/uart_ros2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/soppo/ros2_ws/build/uart_ros2
