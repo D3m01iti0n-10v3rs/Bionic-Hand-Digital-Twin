@@ -66,6 +66,8 @@ class UartNode : public rclcpp::Node{
         rclcpp::Subscription<std_msgs::msg::String>::SharedPtr subscriber_;
         rclcpp::TimerBase::SharedPtr timer_;
 
+        std::string rx_buffer_;
+
         int uart_fd_ = -1;
         int stop_fd_ = -1;
 
@@ -146,21 +148,23 @@ class UartNode : public rclcpp::Node{
                     break;
                 }
 
-                if (fds[1].revents & POLLIN){
-                    break;
-                }
+                if (fds[1].revents & POLLIN) break;
 
                 if (fds[0].revents & POLLIN){
                     ssize_t bytes_read = read(uart_fd_, buffer, sizeof(buffer));
 
                     if (bytes_read > 0){
-                        std::string data(buffer, bytes_read);
+                        rx_buffer_.append(buffer, bytes_read);
 
-                        while (!data.empty() && (data.back() == '\r' || data.back() == '\n'))
-                            data.pop_back();
+                        size_t pos;
+                        while ((pos = rx_buffer_.find('\n')) != std::string::npos){
+                            std::string line = rx_buffer_.substr(0, pos);
+                            rx_buffer_.erase(0, pos + 1);
 
-                        if (!data.empty())
-                            RCLCPP_INFO(this->get_logger(), "STM SENT: %s", data.c_str());
+                            if (!line.empty() && line.back() == '\r') line.pop_back();
+
+                            if (!line.empty()) RCLCPP_INFO(this->get_logger(), "STM SENT: %s", line.c_str());
+                        }
                     }
                 }
             }
@@ -168,17 +172,12 @@ class UartNode : public rclcpp::Node{
         
         void timer_callback(){
             char buffer[64];
-            
             std_msgs::msg::String msg;
 
-            for (int i = 0; i < 5; i++){
-                snprintf(buffer, sizeof(buffer), "FINGER%d %d\r\n", i, angle);
+            snprintf(buffer, sizeof(buffer), "%d,%d,%d,%d,%d\r\n", angle, angle, angle, angle, angle);
 
-                msg.data = buffer;
-
-                uart_send(msg);
-                publisher_->publish(msg); // probably doesnt need a publisher at all
-            }
+            msg.data = buffer;
+            uart_send(msg);
 
             switch (state){
                 case 0:
