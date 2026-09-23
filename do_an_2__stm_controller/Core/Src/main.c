@@ -34,8 +34,7 @@ typedef StaticSemaphore_t osStaticMutexDef_t;
 typedef StaticSemaphore_t osStaticSemaphoreDef_t;
 /* USER CODE BEGIN PTD */
 typedef struct {
-    uint8_t finger;
-    uint8_t angle;
+    uint8_t angle[5];
 } ServoCommand_t;
 
 typedef struct {
@@ -130,7 +129,6 @@ const osSemaphoreAttr_t rxSem_attributes = {
   .cb_size = sizeof(rxSemControlBlock),
 };
 /* USER CODE BEGIN PV */
-osSemaphoreId_t sensorSemHandle;
 
 osMessageQueueId_t servoCmdQueue;
 Servo_t fingers[5];
@@ -226,7 +224,7 @@ int main(void)
   sensorSemHandle = osSemaphoreNew(1, 0, &sensorSem_attributes);
 
   /* creation of rxSem */
-  rxSemHandle = osSemaphoreNew(1, 1, &rxSem_attributes);
+  rxSemHandle = osSemaphoreNew(1, 0, &rxSem_attributes);
 
   /* USER CODE BEGIN RTOS_SEMAPHORES */
   /* add semaphores, ... */
@@ -517,16 +515,24 @@ void HAL_UART_ErrorCallback(UART_HandleTypeDef *huart) {  // fixed the uart bug
 void StartComsTask(void *argument)
 {
   /* USER CODE BEGIN 5 */
-	int finger_num = 0;
-	int angle = 0;
+	int angle[5];
   /* Infinite loop */
   for(;;)
   {
 	  osSemaphoreAcquire(rxSemHandle, osWaitForever);
-	  if (sscanf(coms_processing_buf, "FINGER%d %d", &finger_num, &angle) == 2){
+
+	  if (sscanf(coms_processing_buf, "%d,%d,%d,%d,%d",
+												  &angle[0],
+												  &angle[1],
+												  &angle[2],
+												  &angle[3],
+												  &angle[4]) == 5){
 		  ServoCommand_t cmd;
-		  cmd.finger = (uint8_t)finger_num;
-		  cmd.angle = (uint8_t)angle;
+
+		  for (uint8_t i = 0; i < 5; i++){
+			  cmd.angle[i] = (angle[i] > 180) ? 180 : (angle[i] < 0) ? 0 : angle[i];
+		  }
+
 		  osMessageQueuePut(servoCmdQueue, &cmd, 0, 0);
 	  }
 
@@ -550,7 +556,9 @@ void StartServoTask(void *argument)
       osMutexAcquire(finger_data_mutexHandle, osWaitForever);
 
       while (osMessageQueueGet(servoCmdQueue, &cmd, NULL, 0) == osOK) {
-          if (cmd.finger < 5) fingers[cmd.finger].target_angle = (cmd.angle > 180) ? 180 : cmd.angle;
+    	  for (uint8_t i = 0; i < 5; i++){
+    		  fingers[i].target_angle = (cmd.angle[i] > 180) ? 180 : cmd.angle[i];
+    	  }
       }
 
       uint8_t moving = 0;
