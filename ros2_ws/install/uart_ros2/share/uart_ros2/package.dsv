@@ -1,0 +1,6 @@
+source;share/uart_ros2/hook/cmake_prefix_path.dsv
+source;share/uart_ros2/hook/cmake_prefix_path.sh
+source;share/uart_ros2/local_setup.bash
+source;share/uart_ros2/local_setup.dsv
+source;share/uart_ros2/local_setup.sh
+source;share/uart_ros2/local_setup.zsh

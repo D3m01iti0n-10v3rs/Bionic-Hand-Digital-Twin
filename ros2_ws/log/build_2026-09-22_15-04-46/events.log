@@ -1,0 +1,299 @@
+[0.000000] (-) TimerEvent: {}
+[0.004416] (uart_ros2) JobQueued: {'identifier': 'uart_ros2', 'dependencies': OrderedDict()}
+[0.004642] (uart_ros2) JobStarted: {'identifier': 'uart_ros2'}
+[0.041714] (uart_ros2) JobProgress: {'identifier': 'uart_ros2', 'progress': 'cmake'}
+[0.044137] (uart_ros2) JobProgress: {'identifier': 'uart_ros2', 'progress': 'build'}
+[0.046292] (uart_ros2) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/soppo/ros2_ws/build/uart_ros2', '--', '-j12', '-l12'], 'cwd': '/home/soppo/ros2_ws/build/uart_ros2', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'soppo', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'WT_PROFILE_ID': '{61c54bbd-c2c6-5271-96e7-009a87ff44bf}', 'HOME': '/home/soppo', 'OLDPWD': '/home/soppo/ros2_ws/src', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'WSL_DISTRO_NAME': 'Ubuntu-24.04', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/soppo/ros2_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'soppo', 'NAME': 'LAPTOP-RM3J4MJ6', 'WSL_INTEROP': '/run/WSL/405_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files (x86)/VMware/VMware Workstation/bin/:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/java8path:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Cloudflare/Cloudflare WARP/:/mnt/d/nodejs/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files (x86)/STMicroelectronics/STM32 ST-LINK Utility/ST-LINK Utility:/mnt/c/Program Files/PuTTY/:/mnt/c/Program Files/usbipd-win/:/mnt/e/Qt/Tools/mingw1310_64/bin:/mnt/d/Git/cmd:/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/:/mnt/d/Xilinx/Vivado/2023.2/tps/mingw/9.3.0/win64.o/nt/bin:/mnt/c/Program Files/Tailscale/:/mnt/d/MATLAB/R2023a/runtime/win64:/mnt/d/MATLAB/R2023a/bin:/mnt/c/Users/PC/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/PC/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/PC/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/PC/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/PC/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/PC/AppData/Roaming/npm:/mnt/e/MiKTeX/miktex/bin/x64/:/mnt/c/Users/PC/.dotnet/tools:/mnt/d/Xilinx/Vivado/2023.2/tps/mingw/9.3.0/win64.o/nt/bin:/mnt/d/flutter/bin:/mnt/c/Program Files (x86)/Nmap:/mnt/c/msys64/ucrt64/bin', 'WT_SESSION': '642e50db-9adb-4a71-8310-5e68315c3159', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/home/soppo/ros2_ws/install/uart_ros2:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/soppo/ros2_ws/build/uart_ros2', 'PYTHONPATH': '/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'CMAKE_PREFIX_PATH': '/home/soppo/ros2_ws/install/uart_ros2:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy', 'WSLENV': 'WT_SESSION:WT_PROFILE_ID:'}), 'shell': False}
+[0.098969] (-) TimerEvent: {}
+[0.200185] (-) TimerEvent: {}
+[0.262945] (uart_ros2) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/uart_node.dir/src/uart_node.cpp.o\x1b[0m\n'}
+[0.300434] (-) TimerEvent: {}
+[0.401109] (-) TimerEvent: {}
+[0.501828] (-) TimerEvent: {}
+[0.602648] (-) TimerEvent: {}
+[0.704619] (-) TimerEvent: {}
+[0.806404] (-) TimerEvent: {}
+[0.908150] (-) TimerEvent: {}
+[1.008768] (-) TimerEvent: {}
+[1.110305] (-) TimerEvent: {}
+[1.211870] (-) TimerEvent: {}
+[1.313295] (-) TimerEvent: {}
+[1.415897] (-) TimerEvent: {}
+[1.516905] (-) TimerEvent: {}
+[1.618026] (-) TimerEvent: {}
+[1.719831] (-) TimerEvent: {}
+[1.821571] (-) TimerEvent: {}
+[1.923257] (-) TimerEvent: {}
+[2.023950] (-) TimerEvent: {}
+[2.125647] (-) TimerEvent: {}
+[2.227244] (-) TimerEvent: {}
+[2.327852] (-) TimerEvent: {}
+[2.429385] (-) TimerEvent: {}
+[2.531188] (-) TimerEvent: {}
+[2.633454] (-) TimerEvent: {}
+[2.735671] (-) TimerEvent: {}
+[2.837769] (-) TimerEvent: {}
+[2.939364] (-) TimerEvent: {}
+[3.041084] (-) TimerEvent: {}
+[3.142924] (-) TimerEvent: {}
+[3.245111] (-) TimerEvent: {}
+[3.347156] (-) TimerEvent: {}
+[3.449386] (-) TimerEvent: {}
+[3.551604] (-) TimerEvent: {}
+[3.654235] (-) TimerEvent: {}
+[3.756029] (-) TimerEvent: {}
+[3.857368] (-) TimerEvent: {}
+[3.958912] (-) TimerEvent: {}
+[4.060509] (-) TimerEvent: {}
+[4.161588] (-) TimerEvent: {}
+[4.262034] (-) TimerEvent: {}
+[4.362567] (-) TimerEvent: {}
+[4.463254] (-) TimerEvent: {}
+[4.564362] (-) TimerEvent: {}
+[4.665399] (-) TimerEvent: {}
+[4.766376] (-) TimerEvent: {}
+[4.866871] (-) TimerEvent: {}
+[4.967650] (-) TimerEvent: {}
+[5.068973] (-) TimerEvent: {}
+[5.170340] (-) TimerEvent: {}
+[5.271422] (-) TimerEvent: {}
+[5.372572] (-) TimerEvent: {}
+[5.473092] (-) TimerEvent: {}
+[5.573896] (-) TimerEvent: {}
+[5.674902] (-) TimerEvent: {}
+[5.775592] (-) TimerEvent: {}
+[5.876615] (-) TimerEvent: {}
+[5.977434] (-) TimerEvent: {}
+[6.077946] (-) TimerEvent: {}
+[6.178898] (-) TimerEvent: {}
+[6.280109] (-) TimerEvent: {}
+[6.381174] (-) TimerEvent: {}
+[6.481898] (-) TimerEvent: {}
+[6.582343] (-) TimerEvent: {}
+[6.683079] (-) TimerEvent: {}
+[6.784201] (-) TimerEvent: {}
+[6.884867] (-) TimerEvent: {}
+[6.985787] (-) TimerEvent: {}
+[7.086578] (-) TimerEvent: {}
+[7.188165] (-) TimerEvent: {}
+[7.289226] (-) TimerEvent: {}
+[7.389772] (-) TimerEvent: {}
+[7.490494] (-) TimerEvent: {}
+[7.591125] (-) TimerEvent: {}
+[7.691595] (-) TimerEvent: {}
+[7.792353] (-) TimerEvent: {}
+[7.893829] (-) TimerEvent: {}
+[7.995059] (-) TimerEvent: {}
+[8.095903] (-) TimerEvent: {}
+[8.196723] (-) TimerEvent: {}
+[8.297622] (-) TimerEvent: {}
+[8.398739] (-) TimerEvent: {}
+[8.500211] (-) TimerEvent: {}
+[8.601270] (-) TimerEvent: {}
+[8.702356] (-) TimerEvent: {}
+[8.803498] (-) TimerEvent: {}
+[8.904883] (-) TimerEvent: {}
+[9.006049] (-) TimerEvent: {}
+[9.107381] (-) TimerEvent: {}
+[9.208670] (-) TimerEvent: {}
+[9.309856] (-) TimerEvent: {}
+[9.411112] (-) TimerEvent: {}
+[9.513011] (-) TimerEvent: {}
+[9.614121] (-) TimerEvent: {}
+[9.715299] (-) TimerEvent: {}
+[9.816636] (-) TimerEvent: {}
+[9.917810] (-) TimerEvent: {}
+[10.019146] (-) TimerEvent: {}
+[10.120322] (-) TimerEvent: {}
+[10.221226] (-) TimerEvent: {}
+[10.322305] (-) TimerEvent: {}
+[10.423366] (-) TimerEvent: {}
+[10.524610] (-) TimerEvent: {}
+[10.626231] (-) TimerEvent: {}
+[10.727211] (-) TimerEvent: {}
+[10.828555] (-) TimerEvent: {}
+[10.929593] (-) TimerEvent: {}
+[11.030553] (-) TimerEvent: {}
+[11.131594] (-) TimerEvent: {}
+[11.232805] (-) TimerEvent: {}
+[11.333803] (-) TimerEvent: {}
+[11.434769] (-) TimerEvent: {}
+[11.535826] (-) TimerEvent: {}
+[11.636817] (-) TimerEvent: {}
+[11.737584] (-) TimerEvent: {}
+[11.838510] (-) TimerEvent: {}
+[11.939897] (-) TimerEvent: {}
+[12.040921] (-) TimerEvent: {}
+[12.141747] (-) TimerEvent: {}
+[12.242782] (-) TimerEvent: {}
+[12.343917] (-) TimerEvent: {}
+[12.445024] (-) TimerEvent: {}
+[12.546101] (-) TimerEvent: {}
+[12.647066] (-) TimerEvent: {}
+[12.748390] (-) TimerEvent: {}
+[12.849327] (-) TimerEvent: {}
+[12.950910] (-) TimerEvent: {}
+[13.051930] (-) TimerEvent: {}
+[13.152903] (-) TimerEvent: {}
+[13.253742] (-) TimerEvent: {}
+[13.354585] (-) TimerEvent: {}
+[13.455544] (-) TimerEvent: {}
+[13.556636] (-) TimerEvent: {}
+[13.657656] (-) TimerEvent: {}
+[13.758703] (-) TimerEvent: {}
+[13.859923] (-) TimerEvent: {}
+[13.961146] (-) TimerEvent: {}
+[14.062143] (-) TimerEvent: {}
+[14.163004] (-) TimerEvent: {}
+[14.263992] (-) TimerEvent: {}
+[14.364994] (-) TimerEvent: {}
+[14.466495] (-) TimerEvent: {}
+[14.567669] (-) TimerEvent: {}
+[14.669749] (-) TimerEvent: {}
+[14.770619] (-) TimerEvent: {}
+[14.871823] (-) TimerEvent: {}
+[14.973452] (-) TimerEvent: {}
+[15.074735] (-) TimerEvent: {}
+[15.175972] (-) TimerEvent: {}
+[15.276944] (-) TimerEvent: {}
+[15.377875] (-) TimerEvent: {}
+[15.479266] (-) TimerEvent: {}
+[15.580743] (-) TimerEvent: {}
+[15.682354] (-) TimerEvent: {}
+[15.783549] (-) TimerEvent: {}
+[15.885088] (-) TimerEvent: {}
+[15.986304] (-) TimerEvent: {}
+[16.087508] (-) TimerEvent: {}
+[16.188332] (-) TimerEvent: {}
+[16.289366] (-) TimerEvent: {}
+[16.390602] (-) TimerEvent: {}
+[16.492257] (-) TimerEvent: {}
+[16.594246] (-) TimerEvent: {}
+[16.695846] (-) TimerEvent: {}
+[16.797160] (-) TimerEvent: {}
+[16.898610] (-) TimerEvent: {}
+[17.000098] (-) TimerEvent: {}
+[17.101462] (-) TimerEvent: {}
+[17.202687] (-) TimerEvent: {}
+[17.303869] (-) TimerEvent: {}
+[17.404945] (-) TimerEvent: {}
+[17.505865] (-) TimerEvent: {}
+[17.607033] (-) TimerEvent: {}
+[17.708109] (-) TimerEvent: {}
+[17.809105] (-) TimerEvent: {}
+[17.910179] (-) TimerEvent: {}
+[18.011281] (-) TimerEvent: {}
+[18.112416] (-) TimerEvent: {}
+[18.213493] (-) TimerEvent: {}
+[18.314439] (-) TimerEvent: {}
+[18.415494] (-) TimerEvent: {}
+[18.516662] (-) TimerEvent: {}
+[18.617767] (-) TimerEvent: {}
+[18.719303] (-) TimerEvent: {}
+[18.820529] (-) TimerEvent: {}
+[18.921647] (-) TimerEvent: {}
+[19.022810] (-) TimerEvent: {}
+[19.124007] (-) TimerEvent: {}
+[19.225090] (-) TimerEvent: {}
+[19.326302] (-) TimerEvent: {}
+[19.427625] (-) TimerEvent: {}
+[19.529442] (-) TimerEvent: {}
+[19.631064] (-) TimerEvent: {}
+[19.732417] (-) TimerEvent: {}
+[19.833881] (-) TimerEvent: {}
+[19.935253] (-) TimerEvent: {}
+[20.036370] (-) TimerEvent: {}
+[20.137643] (-) TimerEvent: {}
+[20.238931] (-) TimerEvent: {}
+[20.340198] (-) TimerEvent: {}
+[20.441436] (-) TimerEvent: {}
+[20.542900] (-) TimerEvent: {}
+[20.644056] (-) TimerEvent: {}
+[20.745600] (-) TimerEvent: {}
+[20.847045] (-) TimerEvent: {}
+[20.948520] (-) TimerEvent: {}
+[21.049799] (-) TimerEvent: {}
+[21.151202] (-) TimerEvent: {}
+[21.253017] (-) TimerEvent: {}
+[21.354808] (-) TimerEvent: {}
+[21.456415] (-) TimerEvent: {}
+[21.558366] (-) TimerEvent: {}
+[21.660361] (-) TimerEvent: {}
+[21.762087] (-) TimerEvent: {}
+[21.863872] (-) TimerEvent: {}
+[21.965532] (-) TimerEvent: {}
+[22.067404] (-) TimerEvent: {}
+[22.169442] (-) TimerEvent: {}
+[22.271436] (-) TimerEvent: {}
+[22.373374] (-) TimerEvent: {}
+[22.475905] (-) TimerEvent: {}
+[22.577601] (-) TimerEvent: {}
+[22.679230] (-) TimerEvent: {}
+[22.780082] (-) TimerEvent: {}
+[22.881960] (-) TimerEvent: {}
+[22.983531] (-) TimerEvent: {}
+[23.084987] (-) TimerEvent: {}
+[23.186526] (-) TimerEvent: {}
+[23.288137] (-) TimerEvent: {}
+[23.389763] (-) TimerEvent: {}
+[23.491302] (-) TimerEvent: {}
+[23.592622] (-) TimerEvent: {}
+[23.634924] (uart_ros2) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable uart_node\x1b[0m\n'}
+[23.693187] (-) TimerEvent: {}
+[23.794745] (-) TimerEvent: {}
+[23.896009] (-) TimerEvent: {}
+[23.997398] (-) TimerEvent: {}
+[24.099526] (-) TimerEvent: {}
+[24.201564] (-) TimerEvent: {}
+[24.303341] (-) TimerEvent: {}
+[24.405703] (-) TimerEvent: {}
+[24.508037] (-) TimerEvent: {}
+[24.609397] (-) TimerEvent: {}
+[24.711395] (-) TimerEvent: {}
+[24.814232] (-) TimerEvent: {}
+[24.916342] (-) TimerEvent: {}
+[25.018465] (-) TimerEvent: {}
+[25.120786] (-) TimerEvent: {}
+[25.223044] (-) TimerEvent: {}
+[25.325248] (-) TimerEvent: {}
+[25.427411] (-) TimerEvent: {}
+[25.529910] (-) TimerEvent: {}
+[25.632286] (-) TimerEvent: {}
+[25.734282] (-) TimerEvent: {}
+[25.836439] (-) TimerEvent: {}
+[25.939070] (-) TimerEvent: {}
+[26.041564] (-) TimerEvent: {}
+[26.103643] (uart_ros2) StdoutLine: {'line': b'[100%] Built target uart_node\n'}
+[26.142447] (-) TimerEvent: {}
+[26.244296] (-) TimerEvent: {}
+[26.352953] (-) TimerEvent: {}
+[26.365414] (uart_ros2) CommandEnded: {'returncode': 0}
+[26.420745] (uart_ros2) JobProgress: {'identifier': 'uart_ros2', 'progress': 'install'}
+[26.453985] (-) TimerEvent: {}
+[26.493708] (uart_ros2) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/soppo/ros2_ws/build/uart_ros2'], 'cwd': '/home/soppo/ros2_ws/build/uart_ros2', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'soppo', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'WT_PROFILE_ID': '{61c54bbd-c2c6-5271-96e7-009a87ff44bf}', 'HOME': '/home/soppo', 'OLDPWD': '/home/soppo/ros2_ws/src', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'WSL_DISTRO_NAME': 'Ubuntu-24.04', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/soppo/ros2_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'soppo', 'NAME': 'LAPTOP-RM3J4MJ6', 'WSL_INTEROP': '/run/WSL/405_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files (x86)/VMware/VMware Workstation/bin/:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/java8path:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Cloudflare/Cloudflare WARP/:/mnt/d/nodejs/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files (x86)/STMicroelectronics/STM32 ST-LINK Utility/ST-LINK Utility:/mnt/c/Program Files/PuTTY/:/mnt/c/Program Files/usbipd-win/:/mnt/e/Qt/Tools/mingw1310_64/bin:/mnt/d/Git/cmd:/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/:/mnt/d/Xilinx/Vivado/2023.2/tps/mingw/9.3.0/win64.o/nt/bin:/mnt/c/Program Files/Tailscale/:/mnt/d/MATLAB/R2023a/runtime/win64:/mnt/d/MATLAB/R2023a/bin:/mnt/c/Users/PC/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/PC/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/PC/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/PC/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/PC/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/PC/AppData/Roaming/npm:/mnt/e/MiKTeX/miktex/bin/x64/:/mnt/c/Users/PC/.dotnet/tools:/mnt/d/Xilinx/Vivado/2023.2/tps/mingw/9.3.0/win64.o/nt/bin:/mnt/d/flutter/bin:/mnt/c/Program Files (x86)/Nmap:/mnt/c/msys64/ucrt64/bin', 'WT_SESSION': '642e50db-9adb-4a71-8310-5e68315c3159', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/home/soppo/ros2_ws/install/uart_ros2:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/soppo/ros2_ws/build/uart_ros2', 'PYTHONPATH': '/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'CMAKE_PREFIX_PATH': '/home/soppo/ros2_ws/install/uart_ros2:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy', 'WSLENV': 'WT_SESSION:WT_PROFILE_ID:'}), 'shell': False}
+[26.554186] (-) TimerEvent: {}
+[26.582179] (uart_ros2) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[26.589166] (uart_ros2) StdoutLine: {'line': b'-- Installing: /home/soppo/ros2_ws/install/uart_ros2/lib/uart_ros2/uart_node\n'}
+[26.654863] (-) TimerEvent: {}
+[26.732127] (uart_ros2) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/soppo/ros2_ws/install/uart_ros2/lib/uart_ros2/uart_node" to ""\n'}
+[26.735006] (uart_ros2) StdoutLine: {'line': b'-- Up-to-date: /home/soppo/ros2_ws/install/uart_ros2/share/ament_index/resource_index/package_run_dependencies/uart_ros2\n'}
+[26.736090] (uart_ros2) StdoutLine: {'line': b'-- Up-to-date: /home/soppo/ros2_ws/install/uart_ros2/share/ament_index/resource_index/parent_prefix_path/uart_ros2\n'}
+[26.740204] (uart_ros2) StdoutLine: {'line': b'-- Up-to-date: /home/soppo/ros2_ws/install/uart_ros2/share/uart_ros2/environment/ament_prefix_path.sh\n'}
+[26.741086] (uart_ros2) StdoutLine: {'line': b'-- Up-to-date: /home/soppo/ros2_ws/install/uart_ros2/share/uart_ros2/environment/ament_prefix_path.dsv\n'}
+[26.742021] (uart_ros2) StdoutLine: {'line': b'-- Up-to-date: /home/soppo/ros2_ws/install/uart_ros2/share/uart_ros2/environment/path.sh\n'}
+[26.742498] (uart_ros2) StdoutLine: {'line': b'-- Up-to-date: /home/soppo/ros2_ws/install/uart_ros2/share/uart_ros2/environment/path.dsv\n'}
+[26.743392] (uart_ros2) StdoutLine: {'line': b'-- Up-to-date: /home/soppo/ros2_ws/install/uart_ros2/share/uart_ros2/local_setup.bash\n'}
+[26.744264] (uart_ros2) StdoutLine: {'line': b'-- Up-to-date: /home/soppo/ros2_ws/install/uart_ros2/share/uart_ros2/local_setup.sh\n'}
+[26.745009] (uart_ros2) StdoutLine: {'line': b'-- Up-to-date: /home/soppo/ros2_ws/install/uart_ros2/share/uart_ros2/local_setup.zsh\n'}
+[26.745145] (uart_ros2) StdoutLine: {'line': b'-- Up-to-date: /home/soppo/ros2_ws/install/uart_ros2/share/uart_ros2/local_setup.dsv\n'}
+[26.745252] (uart_ros2) StdoutLine: {'line': b'-- Installing: /home/soppo/ros2_ws/install/uart_ros2/share/uart_ros2/package.dsv\n'}
+[26.747415] (uart_ros2) StdoutLine: {'line': b'-- Up-to-date: /home/soppo/ros2_ws/install/uart_ros2/share/ament_index/resource_index/packages/uart_ros2\n'}
+[26.748519] (uart_ros2) StdoutLine: {'line': b'-- Up-to-date: /home/soppo/ros2_ws/install/uart_ros2/share/uart_ros2/cmake/uart_ros2Config.cmake\n'}
+[26.748847] (uart_ros2) StdoutLine: {'line': b'-- Up-to-date: /home/soppo/ros2_ws/install/uart_ros2/share/uart_ros2/cmake/uart_ros2Config-version.cmake\n'}
+[26.749974] (uart_ros2) StdoutLine: {'line': b'-- Up-to-date: /home/soppo/ros2_ws/install/uart_ros2/share/uart_ros2/package.xml\n'}
+[26.755402] (-) TimerEvent: {}
+[26.778400] (uart_ros2) CommandEnded: {'returncode': 0}
+[26.861785] (-) TimerEvent: {}
+[26.972954] (-) TimerEvent: {}
+[27.035462] (uart_ros2) JobEnded: {'identifier': 'uart_ros2', 'rc': 0}
+[27.047160] (-) EventReactorShutdown: {}

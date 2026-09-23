@@ -1,0 +1,2 @@
+Invoking command in '/home/soppo/ros2_ws/build/uart_ros2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/soppo/ros2_ws/build/uart_ros2 -- -j12 -l12
+Invoked command in '/home/soppo/ros2_ws/build/uart_ros2' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/soppo/ros2_ws/build/uart_ros2 -- -j12 -l12

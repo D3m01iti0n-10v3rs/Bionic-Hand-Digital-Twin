@@ -1,0 +1,14 @@
+[01m[K/home/soppo/ros2_ws/src/uart_ros2/src/uart_node.cpp:[m[K In member function ‘[01m[Kvoid UartNode::[01;32m[Ktimer_callback[m[K()[m[K’:
+[01m[K/home/soppo/ros2_ws/src/uart_ros2/src/uart_node.cpp:28:13:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[Kint[m[K’
+   28 |             [01;31m[Kint[m[K angle = 90;
+      |             [01;31m[K^~~[m[K
+[01m[K/home/soppo/ros2_ws/src/uart_ros2/src/uart_node.cpp:32:26:[m[K [01;31m[Kerror: [m[K‘[01m[Kbuffer[m[K’ was not declared in this scope; did you mean ‘[01m[Ksetbuffer[m[K’?
+   32 |                 snprintf([01;31m[Kbuffer[m[K, sizeof(buffer), "FINGER%d %d", i, angle);
+      |                          [01;31m[K^~~~~~[m[K
+      |                          [32m[Ksetbuffer[m[K
+[01m[K/home/soppo/ros2_ws/src/uart_ros2/src/uart_node.cpp:32:68:[m[K [01;31m[Kerror: [m[K‘[01m[Kangle[m[K’ was not declared in this scope
+   32 |                 snprintf(buffer, sizeof(buffer), "FINGER%d %d", i, [01;31m[Kangle[m[K);
+      |                                                                    [01;31m[K^~~~~[m[K
+gmake[2]: *** [CMakeFiles/uart_node.dir/build.make:76: CMakeFiles/uart_node.dir/src/uart_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/uart_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

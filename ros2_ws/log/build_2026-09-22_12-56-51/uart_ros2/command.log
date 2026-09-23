@@ -1,0 +1,6 @@
+Invoking command in '/home/soppo/ros2_ws/build/uart_ros2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/soppo/ros2_ws/src/uart_ros2 -DCMAKE_INSTALL_PREFIX=/home/soppo/ros2_ws/install/uart_ros2
+Invoked command in '/home/soppo/ros2_ws/build/uart_ros2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/soppo/ros2_ws/src/uart_ros2 -DCMAKE_INSTALL_PREFIX=/home/soppo/ros2_ws/install/uart_ros2
+Invoking command in '/home/soppo/ros2_ws/build/uart_ros2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/soppo/ros2_ws/build/uart_ros2 -- -j12 -l12
+Invoked command in '/home/soppo/ros2_ws/build/uart_ros2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/soppo/ros2_ws/build/uart_ros2 -- -j12 -l12
+Invoking command in '/home/soppo/ros2_ws/build/uart_ros2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/soppo/ros2_ws/build/uart_ros2
+Invoked command in '/home/soppo/ros2_ws/build/uart_ros2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/soppo/ros2_ws/build/uart_ros2

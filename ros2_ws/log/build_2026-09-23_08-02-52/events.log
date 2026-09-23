@@ -1,0 +1,243 @@
+[0.000000] (-) TimerEvent: {}
+[0.001049] (uart_ros2) JobQueued: {'identifier': 'uart_ros2', 'dependencies': OrderedDict()}
+[0.003441] (uart_ros2) JobStarted: {'identifier': 'uart_ros2'}
+[0.043440] (uart_ros2) JobProgress: {'identifier': 'uart_ros2', 'progress': 'cmake'}
+[0.046390] (uart_ros2) JobProgress: {'identifier': 'uart_ros2', 'progress': 'build'}
+[0.048124] (uart_ros2) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/soppo/ros2_ws/build/uart_ros2', '--', '-j12', '-l12'], 'cwd': '/home/soppo/ros2_ws/build/uart_ros2', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'soppo', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'WT_PROFILE_ID': '{61c54bbd-c2c6-5271-96e7-009a87ff44bf}', 'HOME': '/home/soppo', 'OLDPWD': '/home/soppo/ros2_ws/src/uart_ros2/src', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'WSL_DISTRO_NAME': 'Ubuntu-24.04', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/soppo/ros2_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'soppo', 'NAME': 'LAPTOP-RM3J4MJ6', 'WSL_INTEROP': '/run/WSL/347_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files (x86)/VMware/VMware Workstation/bin/:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/java8path:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Cloudflare/Cloudflare WARP/:/mnt/d/nodejs/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files (x86)/STMicroelectronics/STM32 ST-LINK Utility/ST-LINK Utility:/mnt/c/Program Files/PuTTY/:/mnt/c/Program Files/usbipd-win/:/mnt/e/Qt/Tools/mingw1310_64/bin:/mnt/d/Git/cmd:/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/:/mnt/d/Xilinx/Vivado/2023.2/tps/mingw/9.3.0/win64.o/nt/bin:/mnt/c/Program Files/Tailscale/:/mnt/d/MATLAB/R2023a/runtime/win64:/mnt/d/MATLAB/R2023a/bin:/mnt/c/Users/PC/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/PC/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/PC/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/PC/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/PC/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/PC/AppData/Roaming/npm:/mnt/e/MiKTeX/miktex/bin/x64/:/mnt/c/Users/PC/.dotnet/tools:/mnt/d/Xilinx/Vivado/2023.2/tps/mingw/9.3.0/win64.o/nt/bin:/mnt/d/flutter/bin:/mnt/c/Program Files (x86)/Nmap:/mnt/c/msys64/ucrt64/bin:/snap/bin', 'WT_SESSION': '2ea8d607-d629-4ac7-bba3-c735eda14b1d', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/home/soppo/ros2_ws/install/uart_ros2:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/soppo/ros2_ws/build/uart_ros2', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'CMAKE_PREFIX_PATH': '/home/soppo/ros2_ws/install/uart_ros2:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy', 'WSLENV': 'WT_SESSION:WT_PROFILE_ID:'}), 'shell': False}
+[0.099142] (-) TimerEvent: {}
+[0.199727] (-) TimerEvent: {}
+[0.300292] (-) TimerEvent: {}
+[0.400876] (-) TimerEvent: {}
+[0.473280] (uart_ros2) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/uart_node.dir/src/uart_node.cpp.o\x1b[0m\n'}
+[0.501086] (-) TimerEvent: {}
+[0.601761] (-) TimerEvent: {}
+[0.702163] (-) TimerEvent: {}
+[0.802597] (-) TimerEvent: {}
+[0.903034] (-) TimerEvent: {}
+[1.003443] (-) TimerEvent: {}
+[1.103893] (-) TimerEvent: {}
+[1.204445] (-) TimerEvent: {}
+[1.305071] (-) TimerEvent: {}
+[1.405807] (-) TimerEvent: {}
+[1.506705] (-) TimerEvent: {}
+[1.607407] (-) TimerEvent: {}
+[1.708273] (-) TimerEvent: {}
+[1.809022] (-) TimerEvent: {}
+[1.909739] (-) TimerEvent: {}
+[2.010494] (-) TimerEvent: {}
+[2.110954] (-) TimerEvent: {}
+[2.211567] (-) TimerEvent: {}
+[2.312156] (-) TimerEvent: {}
+[2.412843] (-) TimerEvent: {}
+[2.513668] (-) TimerEvent: {}
+[2.614374] (-) TimerEvent: {}
+[2.715032] (-) TimerEvent: {}
+[2.815646] (-) TimerEvent: {}
+[2.916215] (-) TimerEvent: {}
+[3.016806] (-) TimerEvent: {}
+[3.117403] (-) TimerEvent: {}
+[3.217984] (-) TimerEvent: {}
+[3.318646] (-) TimerEvent: {}
+[3.419369] (-) TimerEvent: {}
+[3.519986] (-) TimerEvent: {}
+[3.620822] (-) TimerEvent: {}
+[3.721420] (-) TimerEvent: {}
+[3.822000] (-) TimerEvent: {}
+[3.922631] (-) TimerEvent: {}
+[4.023224] (-) TimerEvent: {}
+[4.123748] (-) TimerEvent: {}
+[4.224358] (-) TimerEvent: {}
+[4.325084] (-) TimerEvent: {}
+[4.425676] (-) TimerEvent: {}
+[4.526260] (-) TimerEvent: {}
+[4.626759] (-) TimerEvent: {}
+[4.727363] (-) TimerEvent: {}
+[4.828008] (-) TimerEvent: {}
+[4.928509] (-) TimerEvent: {}
+[5.029354] (-) TimerEvent: {}
+[5.130158] (-) TimerEvent: {}
+[5.230921] (-) TimerEvent: {}
+[5.331494] (-) TimerEvent: {}
+[5.432019] (-) TimerEvent: {}
+[5.532594] (-) TimerEvent: {}
+[5.633381] (-) TimerEvent: {}
+[5.734201] (-) TimerEvent: {}
+[5.834769] (-) TimerEvent: {}
+[5.935389] (-) TimerEvent: {}
+[6.036045] (-) TimerEvent: {}
+[6.136850] (-) TimerEvent: {}
+[6.237521] (-) TimerEvent: {}
+[6.338110] (-) TimerEvent: {}
+[6.438694] (-) TimerEvent: {}
+[6.539240] (-) TimerEvent: {}
+[6.639855] (-) TimerEvent: {}
+[6.740455] (-) TimerEvent: {}
+[6.841255] (-) TimerEvent: {}
+[6.941866] (-) TimerEvent: {}
+[7.042471] (-) TimerEvent: {}
+[7.143054] (-) TimerEvent: {}
+[7.243699] (-) TimerEvent: {}
+[7.344431] (-) TimerEvent: {}
+[7.445275] (-) TimerEvent: {}
+[7.545812] (-) TimerEvent: {}
+[7.646553] (-) TimerEvent: {}
+[7.747555] (-) TimerEvent: {}
+[7.848335] (-) TimerEvent: {}
+[7.949180] (-) TimerEvent: {}
+[8.049748] (-) TimerEvent: {}
+[8.150391] (-) TimerEvent: {}
+[8.251130] (-) TimerEvent: {}
+[8.352260] (-) TimerEvent: {}
+[8.452898] (-) TimerEvent: {}
+[8.553483] (-) TimerEvent: {}
+[8.654152] (-) TimerEvent: {}
+[8.754737] (-) TimerEvent: {}
+[8.855391] (-) TimerEvent: {}
+[8.955933] (-) TimerEvent: {}
+[9.056523] (-) TimerEvent: {}
+[9.157271] (-) TimerEvent: {}
+[9.257802] (-) TimerEvent: {}
+[9.358397] (-) TimerEvent: {}
+[9.459172] (-) TimerEvent: {}
+[9.559905] (-) TimerEvent: {}
+[9.660739] (-) TimerEvent: {}
+[9.761368] (-) TimerEvent: {}
+[9.861875] (-) TimerEvent: {}
+[9.962672] (-) TimerEvent: {}
+[10.063467] (-) TimerEvent: {}
+[10.164160] (-) TimerEvent: {}
+[10.264843] (-) TimerEvent: {}
+[10.365392] (-) TimerEvent: {}
+[10.466021] (-) TimerEvent: {}
+[10.566620] (-) TimerEvent: {}
+[10.667583] (-) TimerEvent: {}
+[10.768166] (-) TimerEvent: {}
+[10.868892] (-) TimerEvent: {}
+[10.969481] (-) TimerEvent: {}
+[11.070035] (-) TimerEvent: {}
+[11.170515] (-) TimerEvent: {}
+[11.332976] (-) TimerEvent: {}
+[11.433605] (-) TimerEvent: {}
+[11.534199] (-) TimerEvent: {}
+[11.635016] (-) TimerEvent: {}
+[11.735954] (-) TimerEvent: {}
+[11.837465] (-) TimerEvent: {}
+[11.937985] (-) TimerEvent: {}
+[12.038505] (-) TimerEvent: {}
+[12.139062] (-) TimerEvent: {}
+[12.239642] (-) TimerEvent: {}
+[12.340507] (-) TimerEvent: {}
+[12.441571] (-) TimerEvent: {}
+[12.542155] (-) TimerEvent: {}
+[12.642744] (-) TimerEvent: {}
+[12.743661] (-) TimerEvent: {}
+[12.844285] (-) TimerEvent: {}
+[12.945134] (-) TimerEvent: {}
+[13.045696] (-) TimerEvent: {}
+[13.146489] (-) TimerEvent: {}
+[13.247031] (-) TimerEvent: {}
+[13.347542] (-) TimerEvent: {}
+[13.448253] (-) TimerEvent: {}
+[13.548919] (-) TimerEvent: {}
+[13.649575] (-) TimerEvent: {}
+[13.750285] (-) TimerEvent: {}
+[13.850733] (-) TimerEvent: {}
+[13.951356] (-) TimerEvent: {}
+[14.051919] (-) TimerEvent: {}
+[14.152514] (-) TimerEvent: {}
+[14.253211] (-) TimerEvent: {}
+[14.353963] (-) TimerEvent: {}
+[14.454886] (-) TimerEvent: {}
+[14.555619] (-) TimerEvent: {}
+[14.656297] (-) TimerEvent: {}
+[14.757041] (-) TimerEvent: {}
+[14.857588] (-) TimerEvent: {}
+[14.958382] (-) TimerEvent: {}
+[15.058934] (-) TimerEvent: {}
+[15.159409] (-) TimerEvent: {}
+[15.259976] (-) TimerEvent: {}
+[15.360533] (-) TimerEvent: {}
+[15.461265] (-) TimerEvent: {}
+[15.561915] (-) TimerEvent: {}
+[15.662561] (-) TimerEvent: {}
+[15.763465] (-) TimerEvent: {}
+[15.864457] (-) TimerEvent: {}
+[15.965238] (-) TimerEvent: {}
+[16.065988] (-) TimerEvent: {}
+[16.166691] (-) TimerEvent: {}
+[16.267321] (-) TimerEvent: {}
+[16.367910] (-) TimerEvent: {}
+[16.468781] (-) TimerEvent: {}
+[16.569456] (-) TimerEvent: {}
+[16.670114] (-) TimerEvent: {}
+[16.770662] (-) TimerEvent: {}
+[16.871205] (-) TimerEvent: {}
+[16.971830] (-) TimerEvent: {}
+[17.072417] (-) TimerEvent: {}
+[17.173183] (-) TimerEvent: {}
+[17.273799] (-) TimerEvent: {}
+[17.374407] (-) TimerEvent: {}
+[17.474950] (-) TimerEvent: {}
+[17.575522] (-) TimerEvent: {}
+[17.676029] (-) TimerEvent: {}
+[17.776854] (-) TimerEvent: {}
+[17.877472] (-) TimerEvent: {}
+[17.978079] (-) TimerEvent: {}
+[18.078678] (-) TimerEvent: {}
+[18.179230] (-) TimerEvent: {}
+[18.279796] (-) TimerEvent: {}
+[18.380446] (-) TimerEvent: {}
+[18.481145] (-) TimerEvent: {}
+[18.582013] (-) TimerEvent: {}
+[18.682736] (-) TimerEvent: {}
+[18.783463] (-) TimerEvent: {}
+[18.884235] (-) TimerEvent: {}
+[18.984906] (-) TimerEvent: {}
+[19.085541] (-) TimerEvent: {}
+[19.186031] (-) TimerEvent: {}
+[19.286605] (-) TimerEvent: {}
+[19.387164] (-) TimerEvent: {}
+[19.487774] (-) TimerEvent: {}
+[19.588317] (-) TimerEvent: {}
+[19.689031] (-) TimerEvent: {}
+[19.789539] (-) TimerEvent: {}
+[19.814687] (uart_ros2) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable uart_node\x1b[0m\n'}
+[19.889666] (-) TimerEvent: {}
+[19.990241] (-) TimerEvent: {}
+[20.090912] (-) TimerEvent: {}
+[20.191407] (-) TimerEvent: {}
+[20.292028] (-) TimerEvent: {}
+[20.392845] (-) TimerEvent: {}
+[20.493537] (-) TimerEvent: {}
+[20.594219] (-) TimerEvent: {}
+[20.694834] (-) TimerEvent: {}
+[20.795482] (-) TimerEvent: {}
+[20.896159] (-) TimerEvent: {}
+[20.996821] (-) TimerEvent: {}
+[21.021038] (uart_ros2) StdoutLine: {'line': b'[100%] Built target uart_node\n'}
+[21.059323] (uart_ros2) CommandEnded: {'returncode': 0}
+[21.064852] (uart_ros2) JobProgress: {'identifier': 'uart_ros2', 'progress': 'install'}
+[21.094558] (uart_ros2) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/soppo/ros2_ws/build/uart_ros2'], 'cwd': '/home/soppo/ros2_ws/build/uart_ros2', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'soppo', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'WT_PROFILE_ID': '{61c54bbd-c2c6-5271-96e7-009a87ff44bf}', 'HOME': '/home/soppo', 'OLDPWD': '/home/soppo/ros2_ws/src/uart_ros2/src', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'WSL_DISTRO_NAME': 'Ubuntu-24.04', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/soppo/ros2_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'soppo', 'NAME': 'LAPTOP-RM3J4MJ6', 'WSL_INTEROP': '/run/WSL/347_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files (x86)/VMware/VMware Workstation/bin/:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/java8path:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Cloudflare/Cloudflare WARP/:/mnt/d/nodejs/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files (x86)/STMicroelectronics/STM32 ST-LINK Utility/ST-LINK Utility:/mnt/c/Program Files/PuTTY/:/mnt/c/Program Files/usbipd-win/:/mnt/e/Qt/Tools/mingw1310_64/bin:/mnt/d/Git/cmd:/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/:/mnt/d/Xilinx/Vivado/2023.2/tps/mingw/9.3.0/win64.o/nt/bin:/mnt/c/Program Files/Tailscale/:/mnt/d/MATLAB/R2023a/runtime/win64:/mnt/d/MATLAB/R2023a/bin:/mnt/c/Users/PC/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/PC/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/PC/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/PC/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/PC/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/PC/AppData/Roaming/npm:/mnt/e/MiKTeX/miktex/bin/x64/:/mnt/c/Users/PC/.dotnet/tools:/mnt/d/Xilinx/Vivado/2023.2/tps/mingw/9.3.0/win64.o/nt/bin:/mnt/d/flutter/bin:/mnt/c/Program Files (x86)/Nmap:/mnt/c/msys64/ucrt64/bin:/snap/bin', 'WT_SESSION': '2ea8d607-d629-4ac7-bba3-c735eda14b1d', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/home/soppo/ros2_ws/install/uart_ros2:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/soppo/ros2_ws/build/uart_ros2', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'CMAKE_PREFIX_PATH': '/home/soppo/ros2_ws/install/uart_ros2:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy', 'WSLENV': 'WT_SESSION:WT_PROFILE_ID:'}), 'shell': False}
+[21.097003] (-) TimerEvent: {}
+[21.117478] (uart_ros2) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[21.121290] (uart_ros2) StdoutLine: {'line': b'-- Installing: /home/soppo/ros2_ws/install/uart_ros2/lib/uart_ros2/uart_node\n'}
+[21.133430] (uart_ros2) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/soppo/ros2_ws/install/uart_ros2/lib/uart_ros2/uart_node" to ""\n'}
+[21.134501] (uart_ros2) StdoutLine: {'line': b'-- Up-to-date: /home/soppo/ros2_ws/install/uart_ros2/share/ament_index/resource_index/package_run_dependencies/uart_ros2\n'}
+[21.135048] (uart_ros2) StdoutLine: {'line': b'-- Up-to-date: /home/soppo/ros2_ws/install/uart_ros2/share/ament_index/resource_index/parent_prefix_path/uart_ros2\n'}
+[21.135735] (uart_ros2) StdoutLine: {'line': b'-- Up-to-date: /home/soppo/ros2_ws/install/uart_ros2/share/uart_ros2/environment/ament_prefix_path.sh\n'}
+[21.136169] (uart_ros2) StdoutLine: {'line': b'-- Up-to-date: /home/soppo/ros2_ws/install/uart_ros2/share/uart_ros2/environment/ament_prefix_path.dsv\n'}
+[21.136977] (uart_ros2) StdoutLine: {'line': b'-- Up-to-date: /home/soppo/ros2_ws/install/uart_ros2/share/uart_ros2/environment/path.sh\n'}
+[21.137327] (uart_ros2) StdoutLine: {'line': b'-- Up-to-date: /home/soppo/ros2_ws/install/uart_ros2/share/uart_ros2/environment/path.dsv\n'}
+[21.137506] (uart_ros2) StdoutLine: {'line': b'-- Up-to-date: /home/soppo/ros2_ws/install/uart_ros2/share/uart_ros2/local_setup.bash\n'}
+[21.137651] (uart_ros2) StdoutLine: {'line': b'-- Up-to-date: /home/soppo/ros2_ws/install/uart_ros2/share/uart_ros2/local_setup.sh\n'}
+[21.137766] (uart_ros2) StdoutLine: {'line': b'-- Up-to-date: /home/soppo/ros2_ws/install/uart_ros2/share/uart_ros2/local_setup.zsh\n'}
+[21.137892] (uart_ros2) StdoutLine: {'line': b'-- Up-to-date: /home/soppo/ros2_ws/install/uart_ros2/share/uart_ros2/local_setup.dsv\n'}
+[21.138018] (uart_ros2) StdoutLine: {'line': b'-- Installing: /home/soppo/ros2_ws/install/uart_ros2/share/uart_ros2/package.dsv\n'}
+[21.140355] (uart_ros2) StdoutLine: {'line': b'-- Up-to-date: /home/soppo/ros2_ws/install/uart_ros2/share/ament_index/resource_index/packages/uart_ros2\n'}
+[21.140901] (uart_ros2) StdoutLine: {'line': b'-- Up-to-date: /home/soppo/ros2_ws/install/uart_ros2/share/uart_ros2/cmake/uart_ros2Config.cmake\n'}
+[21.141277] (uart_ros2) StdoutLine: {'line': b'-- Up-to-date: /home/soppo/ros2_ws/install/uart_ros2/share/uart_ros2/cmake/uart_ros2Config-version.cmake\n'}
+[21.141386] (uart_ros2) StdoutLine: {'line': b'-- Up-to-date: /home/soppo/ros2_ws/install/uart_ros2/share/uart_ros2/package.xml\n'}
+[21.148308] (uart_ros2) CommandEnded: {'returncode': 0}
+[21.197269] (-) TimerEvent: {}
+[21.221991] (uart_ros2) JobEnded: {'identifier': 'uart_ros2', 'rc': 0}
+[21.224962] (-) EventReactorShutdown: {}
