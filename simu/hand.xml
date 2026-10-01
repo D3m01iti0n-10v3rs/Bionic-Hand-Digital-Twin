@@ -47,58 +47,58 @@
   <body name="middle" pos="0.000000 0.000000 0.000000" quat="1.00000000 0.00000000 0.00000000 0.00000000">
    <geom type="mesh" mesh="f_base" contype="0" conaffinity="0" group="1"/>
    <body name="middle_prox"><joint name="middle_mcp" pos="0.089600 0.089600 0.090000" axis="0 0 1" range="-60 18"/><geom type="mesh" mesh="f_prox" group="0"/>
-    <body name="middle_mid"><joint name="middle_pip" pos="0.134300 0.075500 0.090000" axis="0 0 1" range="-150 150"/><geom type="mesh" mesh="f_mid" group="0"/>
-     <body name="middle_dist"><joint name="middle_dip" pos="0.157300 0.042800 0.090000" axis="0 0 1" range="-150 150"/><geom type="mesh" mesh="f_dist" group="0"/></body>
+    <body name="middle_mid"><joint damping="0.015" name="middle_pip" pos="0.134300 0.075500 0.090000" axis="0 0 1" range="-80 35"/><geom type="mesh" mesh="f_mid" group="0"/>
+     <body name="middle_dist"><joint damping="0.015" name="middle_dip" pos="0.157300 0.042800 0.090000" axis="0 0 1" range="-62 62"/><geom type="mesh" mesh="f_dist" group="0"/></body>
     </body>
-    <body name="middle_tend"><joint name="middle_tj" pos="0.130000 0.067600 0.090000" axis="0 0 1" range="-150 150"/><geom type="mesh" mesh="f_tend" contype="0" conaffinity="0" group="1"/></body>
+    <body name="middle_tend"><joint damping="0.015" name="middle_tj" pos="0.130000 0.067600 0.090000" axis="0 0 1" range="-90 25"/><geom type="mesh" mesh="f_tend" contype="0" conaffinity="0" group="1"/></body>
    </body>
-   <body name="middle_plink"><joint name="middle_lj" pos="0.096100 0.067600 0.090000" axis="0 0 1" range="-150 150"/><geom type="mesh" mesh="f_plink" contype="0" conaffinity="0" group="1"/></body>
+   <body name="middle_plink"><joint damping="0.015" name="middle_lj" pos="0.096100 0.067600 0.090000" axis="0 0 1" range="-55 14"/><geom type="mesh" mesh="f_plink" contype="0" conaffinity="0" group="1"/></body>
   </body>
   <body name="middle_horn"><joint name="middle_servo" pos="0.060454 0.098000 0.090151" axis="0 -1 0" range="-61.34096708762931 59.65903291237069"/><geom type="mesh" mesh="horn1" contype="0" conaffinity="0" group="1"/>
    <body name="middle_rod"><joint name="middle_rod_ball" type="ball" pos="0.056339 0.107400 0.082773" damping="1e-5" armature="1e-6"/><geom type="mesh" mesh="rod1" contype="0" conaffinity="0" group="1"/></body></body>
   <body name="ring" pos="0.009363 -0.000000 0.009951" quat="0.99691734 -0.00000004 -0.07845908 0.00000001">
    <geom type="mesh" mesh="f_base" contype="0" conaffinity="0" group="1"/>
    <body name="ring_prox"><joint name="ring_mcp" pos="0.089600 0.089600 0.090000" axis="0 0 1" range="-60 18"/><geom type="mesh" mesh="f_prox" group="0"/>
-    <body name="ring_mid"><joint name="ring_pip" pos="0.134300 0.075500 0.090000" axis="0 0 1" range="-150 150"/><geom type="mesh" mesh="f_mid" group="0"/>
-     <body name="ring_dist"><joint name="ring_dip" pos="0.157300 0.042800 0.090000" axis="0 0 1" range="-150 150"/><geom type="mesh" mesh="f_dist" group="0"/></body>
+    <body name="ring_mid"><joint damping="0.015" name="ring_pip" pos="0.134300 0.075500 0.090000" axis="0 0 1" range="-80 35"/><geom type="mesh" mesh="f_mid" group="0"/>
+     <body name="ring_dist"><joint damping="0.015" name="ring_dip" pos="0.157300 0.042800 0.090000" axis="0 0 1" range="-62 62"/><geom type="mesh" mesh="f_dist" group="0"/></body>
     </body>
-    <body name="ring_tend"><joint name="ring_tj" pos="0.130000 0.067600 0.090000" axis="0 0 1" range="-150 150"/><geom type="mesh" mesh="f_tend" contype="0" conaffinity="0" group="1"/></body>
+    <body name="ring_tend"><joint damping="0.015" name="ring_tj" pos="0.130000 0.067600 0.090000" axis="0 0 1" range="-90 25"/><geom type="mesh" mesh="f_tend" contype="0" conaffinity="0" group="1"/></body>
    </body>
-   <body name="ring_plink"><joint name="ring_lj" pos="0.096100 0.067600 0.090000" axis="0 0 1" range="-150 150"/><geom type="mesh" mesh="f_plink" contype="0" conaffinity="0" group="1"/></body>
+   <body name="ring_plink"><joint damping="0.015" name="ring_lj" pos="0.096100 0.067600 0.090000" axis="0 0 1" range="-55 14"/><geom type="mesh" mesh="f_plink" contype="0" conaffinity="0" group="1"/></body>
   </body>
   <body name="ring_horn"><joint name="ring_servo" pos="0.054971 0.098000 0.108449" axis="0 -1 0" range="-60.542380449345075 60.457619550654925"/><geom type="mesh" mesh="horn2" contype="0" conaffinity="0" group="1"/>
    <body name="ring_rod"><joint name="ring_rod_ball" type="ball" pos="0.051946 0.105806 0.100551" damping="1e-5" armature="1e-6"/><geom type="mesh" mesh="rod2" contype="0" conaffinity="0" group="1"/></body></body>
   <body name="index" pos="-0.020236 -0.000000 -0.008219" quat="0.99691733 -0.00000000 0.07845910 -0.00000000">
    <geom type="mesh" mesh="f_base" contype="0" conaffinity="0" group="1"/>
    <body name="index_prox"><joint name="index_mcp" pos="0.089600 0.089600 0.090000" axis="0 0 1" range="-60 18"/><geom type="mesh" mesh="f_prox" group="0"/>
-    <body name="index_mid"><joint name="index_pip" pos="0.134300 0.075500 0.090000" axis="0 0 1" range="-150 150"/><geom type="mesh" mesh="f_mid" group="0"/>
-     <body name="index_dist"><joint name="index_dip" pos="0.157300 0.042800 0.090000" axis="0 0 1" range="-150 150"/><geom type="mesh" mesh="f_dist" group="0"/></body>
+    <body name="index_mid"><joint damping="0.015" name="index_pip" pos="0.134300 0.075500 0.090000" axis="0 0 1" range="-80 35"/><geom type="mesh" mesh="f_mid" group="0"/>
+     <body name="index_dist"><joint damping="0.015" name="index_dip" pos="0.157300 0.042800 0.090000" axis="0 0 1" range="-62 62"/><geom type="mesh" mesh="f_dist" group="0"/></body>
     </body>
-    <body name="index_tend"><joint name="index_tj" pos="0.130000 0.067600 0.090000" axis="0 0 1" range="-150 150"/><geom type="mesh" mesh="f_tend" contype="0" conaffinity="0" group="1"/></body>
+    <body name="index_tend"><joint damping="0.015" name="index_tj" pos="0.130000 0.067600 0.090000" axis="0 0 1" range="-90 25"/><geom type="mesh" mesh="f_tend" contype="0" conaffinity="0" group="1"/></body>
    </body>
-   <body name="index_plink"><joint name="index_lj" pos="0.096100 0.067600 0.090000" axis="0 0 1" range="-150 150"/><geom type="mesh" mesh="f_plink" contype="0" conaffinity="0" group="1"/></body>
+   <body name="index_plink"><joint damping="0.015" name="index_lj" pos="0.096100 0.067600 0.090000" axis="0 0 1" range="-55 14"/><geom type="mesh" mesh="f_plink" contype="0" conaffinity="0" group="1"/></body>
   </body>
   <body name="index_horn"><joint name="index_servo" pos="0.053577 0.098000 0.071364" axis="0 -1 0" range="-60.29107972270824 60.70892027729176"/><geom type="mesh" mesh="horn3" contype="0" conaffinity="0" group="1"/>
    <body name="index_rod"><joint name="index_rod_ball" type="ball" pos="0.048234 0.104219 0.064814" damping="1e-5" armature="1e-6"/><geom type="mesh" mesh="rod3" contype="0" conaffinity="0" group="1"/></body></body>
   <body name="pinky" pos="0.017054 0.000000 0.021245" quat="0.98768833 -0.00000000 -0.15643451 -0.00000001">
    <geom type="mesh" mesh="f_base" contype="0" conaffinity="0" group="1"/>
    <body name="pinky_prox"><joint name="pinky_mcp" pos="0.089600 0.089600 0.090000" axis="0 0 1" range="-60 18"/><geom type="mesh" mesh="f_prox" group="0"/>
-    <body name="pinky_mid"><joint name="pinky_pip" pos="0.134300 0.075500 0.090000" axis="0 0 1" range="-150 150"/><geom type="mesh" mesh="f_mid" group="0"/>
-     <body name="pinky_dist"><joint name="pinky_dip" pos="0.157300 0.042800 0.090000" axis="0 0 1" range="-150 150"/><geom type="mesh" mesh="f_dist" group="0"/></body>
+    <body name="pinky_mid"><joint damping="0.015" name="pinky_pip" pos="0.134300 0.075500 0.090000" axis="0 0 1" range="-80 35"/><geom type="mesh" mesh="f_mid" group="0"/>
+     <body name="pinky_dist"><joint damping="0.015" name="pinky_dip" pos="0.157300 0.042800 0.090000" axis="0 0 1" range="-62 62"/><geom type="mesh" mesh="f_dist" group="0"/></body>
     </body>
-    <body name="pinky_tend"><joint name="pinky_tj" pos="0.130000 0.067600 0.090000" axis="0 0 1" range="-150 150"/><geom type="mesh" mesh="f_tend" contype="0" conaffinity="0" group="1"/></body>
+    <body name="pinky_tend"><joint damping="0.015" name="pinky_tj" pos="0.130000 0.067600 0.090000" axis="0 0 1" range="-90 25"/><geom type="mesh" mesh="f_tend" contype="0" conaffinity="0" group="1"/></body>
    </body>
-   <body name="pinky_plink"><joint name="pinky_lj" pos="0.096100 0.067600 0.090000" axis="0 0 1" range="-150 150"/><geom type="mesh" mesh="f_plink" contype="0" conaffinity="0" group="1"/></body>
+   <body name="pinky_plink"><joint damping="0.015" name="pinky_lj" pos="0.096100 0.067600 0.090000" axis="0 0 1" range="-55 14"/><geom type="mesh" mesh="f_plink" contype="0" conaffinity="0" group="1"/></body>
   </body>
   <body name="pinky_horn"><joint name="pinky_servo" pos="0.046692 0.098000 0.125664" axis="0 -1 0" range="-60.10726133716128 60.89273866283872"/><geom type="mesh" mesh="horn4" contype="0" conaffinity="0" group="1"/>
    <body name="pinky_rod"><joint name="pinky_rod_ball" type="ball" pos="0.044887 0.104106 0.117449" damping="1e-5" armature="1e-6"/><geom type="mesh" mesh="rod4" contype="0" conaffinity="0" group="1"/></body></body>
   <geom type="mesh" mesh="t_mcp" contype="0" conaffinity="0" group="1"/>
   <body name="thumb_cmc"><joint name="thumb_cmc" pos="0.037000 0.063600 0.052800" axis="1 0 0" range="-60 60"/><geom type="mesh" mesh="t_base" group="0"/>
-   <body name="thumb_prox"><joint name="thumb_pip" pos="0.037000 0.050000 0.025000" axis="1 0 0" range="-150 150"/><geom type="mesh" mesh="t_prox" group="0"/>
-    <body name="thumb_dist"><joint name="thumb_ip" pos="0.037000 0.026700 0.013300" axis="1 0 0" range="-150 150"/><geom type="mesh" mesh="t_dist" group="0"/></body></body>
-   <body name="thumb_tend"><joint name="thumb_tj" pos="0.037000 0.042350 0.028800" axis="1 0 0" range="-150 150"/><geom type="mesh" mesh="t_tend" contype="0" conaffinity="0" group="1"/></body>
+   <body name="thumb_prox"><joint damping="0.015" name="thumb_pip" pos="0.037000 0.050000 0.025000" axis="1 0 0" range="-68 50"/><geom type="mesh" mesh="t_prox" group="0"/>
+    <body name="thumb_dist"><joint damping="0.015" name="thumb_ip" pos="0.037000 0.026700 0.013300" axis="1 0 0" range="-58 44"/><geom type="mesh" mesh="t_dist" group="0"/></body></body>
+   <body name="thumb_tend"><joint damping="0.015" name="thumb_tj" pos="0.037000 0.042350 0.028800" axis="1 0 0" range="-90 44"/><geom type="mesh" mesh="t_tend" contype="0" conaffinity="0" group="1"/></body>
   </body>
-  <body name="thumb_plink"><joint name="thumb_lj" pos="0.037000 0.085600 0.046000" axis="1 0 0" range="-150 150"/><geom type="mesh" mesh="t_plink" contype="0" conaffinity="0" group="1"/></body>
+  <body name="thumb_plink"><joint damping="0.015" name="thumb_lj" pos="0.037000 0.085600 0.046000" axis="1 0 0" range="-25 27"/><geom type="mesh" mesh="t_plink" contype="0" conaffinity="0" group="1"/></body>
   <body name="thumb_horn"><joint name="thumb_servo" pos="0.024174 0.057000 0.089456" axis="0 -1 0" range="-76.57495504488601 104.42504495511399"/><geom type="mesh" mesh="hornT" contype="0" conaffinity="0" group="1"/>
    <body name="thumb_rod"><joint name="thumb_rod_ball" type="ball" pos="0.031686 0.049334 0.086824" damping="1e-5" armature="1e-6"/><geom type="mesh" mesh="rodT" contype="0" conaffinity="0" group="1"/></body></body>
  </worldbody>
