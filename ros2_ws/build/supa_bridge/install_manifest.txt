@@ -1,0 +1,16 @@
+/mnt/d/doan2_realz/shit_for_git/ros2_ws/install/supa_bridge/lib/supa_bridge/supa_bridge
+/mnt/d/doan2_realz/shit_for_git/ros2_ws/install/supa_bridge/share/ament_index/resource_index/package_run_dependencies/supa_bridge
+/mnt/d/doan2_realz/shit_for_git/ros2_ws/install/supa_bridge/share/ament_index/resource_index/parent_prefix_path/supa_bridge
+/mnt/d/doan2_realz/shit_for_git/ros2_ws/install/supa_bridge/share/supa_bridge/environment/ament_prefix_path.sh
+/mnt/d/doan2_realz/shit_for_git/ros2_ws/install/supa_bridge/share/supa_bridge/environment/ament_prefix_path.dsv
+/mnt/d/doan2_realz/shit_for_git/ros2_ws/install/supa_bridge/share/supa_bridge/environment/path.sh
+/mnt/d/doan2_realz/shit_for_git/ros2_ws/install/supa_bridge/share/supa_bridge/environment/path.dsv
+/mnt/d/doan2_realz/shit_for_git/ros2_ws/install/supa_bridge/share/supa_bridge/local_setup.bash
+/mnt/d/doan2_realz/shit_for_git/ros2_ws/install/supa_bridge/share/supa_bridge/local_setup.sh
+/mnt/d/doan2_realz/shit_for_git/ros2_ws/install/supa_bridge/share/supa_bridge/local_setup.zsh
+/mnt/d/doan2_realz/shit_for_git/ros2_ws/install/supa_bridge/share/supa_bridge/local_setup.dsv
+/mnt/d/doan2_realz/shit_for_git/ros2_ws/install/supa_bridge/share/supa_bridge/package.dsv
+/mnt/d/doan2_realz/shit_for_git/ros2_ws/install/supa_bridge/share/ament_index/resource_index/packages/supa_bridge
+/mnt/d/doan2_realz/shit_for_git/ros2_ws/install/supa_bridge/share/supa_bridge/cmake/supa_bridgeConfig.cmake
+/mnt/d/doan2_realz/shit_for_git/ros2_ws/install/supa_bridge/share/supa_bridge/cmake/supa_bridgeConfig-version.cmake
+/mnt/d/doan2_realz/shit_for_git/ros2_ws/install/supa_bridge/share/supa_bridge/package.xml

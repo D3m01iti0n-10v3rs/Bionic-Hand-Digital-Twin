@@ -1,0 +1,6 @@
+source;share/supa_bridge/hook/cmake_prefix_path.dsv
+source;share/supa_bridge/hook/cmake_prefix_path.sh
+source;share/supa_bridge/local_setup.bash
+source;share/supa_bridge/local_setup.dsv
+source;share/supa_bridge/local_setup.sh
+source;share/supa_bridge/local_setup.zsh

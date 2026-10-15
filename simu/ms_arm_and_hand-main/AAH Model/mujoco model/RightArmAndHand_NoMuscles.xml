@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mujoco model="RightArmAndHand_NoMuscles">
+  <compiler inertiafromgeom="auto" angle="radian" balanceinertia="true" boundmass="0.001" boundinertia="0.001">
+    <lengthrange inttotal="500"></lengthrange>
+  </compiler>
+  <default>
+    <joint limited="true" damping="0.5" armature="0.01" stiffness="0"></joint>
+    <geom contype="1" conaffinity="1" condim="3" margin="0.001" solref=".02 1" solimp=".8 .8 .01" material="geom"></geom>
+    <site size="0.001"></site>
+    <tendon width="0.001" rgba=".95 .3 .3 1" limited="false"></tendon>
+    <default class="muscle">
+      <muscle ctrllimited="true" ctrlrange="0 1" scale="400"></muscle>
+    </default>
+    <default class="motor">
+      <motor gear="20"></motor>
+    </default>
+  </default>
+  <option timestep="0.002">
+    <flag energy="enable"></flag>
+  </option>
+  <size njmax="1000" nconmax="400" nuser_jnt="1"></size>
+  <visual>
+    <map fogstart="6" fogend="10"></map>
+    <quality shadowsize="2048"></quality>
+    <headlight diffuse=".6 .6 .6" specular="0 0 0"></headlight>
+  </visual>
+  <worldbody>
+    <geom name="floor" type="plane" pos="0 0 -0.5" size="10 10 0.125" material="MatPlane" condim="3"></geom>
+    <body name="Thorax" pos="       0        0        0" quat="0.707107 0.707107        0        0">
+      <light cutoff="50" diffuse=".7 .7 .7" dir="-1.5 -1 -1" directional="false" exponent="30" pos="1.5 1 1" specular=".9 .9 .9"></light>
+      <geom name="Thorax_thorax" type="mesh" mesh="thorax"></geom>
+      <joint name="Thorax_tra3" type="slide" pos="0 0 0" axis="       0        0        1" limited="true" range="      -3        3" ref="0" armature="0" damping="0" stiffness="0"></joint>
+      <joint name="Thorax_tra2" type="slide" pos="0 0 0" axis="       0        1        0" limited="true" range="      -3        3" ref="0" armature="0" damping="0" stiffness="0"></joint>
+      <joint name="Thorax_tra1" type="slide" pos="0 0 0" axis="       1        0        0" limited="true" range="      -3        3" ref="0" armature="0" damping="0" stiffness="0"></joint>
+      <joint name="Thorax_rot1" type="hinge" pos="0 0 0" axis="       0        0        1" limited="true" range=" -1.5708   1.5708" ref="0" armature="0" damping="0" stiffness="0"></joint>
+      <joint name="Thorax_rot2" type="hinge" pos="0 0 0" axis="       0        1        0" limited="true" range=" -1.5708   1.5708" ref="0" armature="0" damping="0" stiffness="0"></joint>
+      <joint name="Thorax_rot3" type="hinge" pos="0 0 0" axis="       1        0        0" limited="true" range=" -1.5708   1.5708" ref="0" armature="0" damping="0" stiffness="0"></joint>
+      <body name="RA_clavicle" pos="0.006325  0.00693 0.025465" quat="       1        0        0        0">
+        <geom name="RA_clavicle_clavicle" type="mesh" mesh="clavicle"></geom>
+        <joint name="ra_sternoclavicular_r2_d" type="hinge" pos="0 0 0" axis="  0.0153 0.989299  -0.1451" limited="false" range="-99999.9  99999.9" ref="0"></joint>
+        <joint name="ra_sternoclavicular_r3_d" type="hinge" pos="0 0 0" axis="-0.994473        0 -0.104997" limited="false" range="-99999.9  99999.9" ref="0"></joint>
+        <body name="RA_clavphant" pos="-0.01433  0.02007 0.135535" quat="       1        0        0        0">
+          <joint name="ra_unrotscap_r3_d" type="hinge" pos="0 0 0" axis="-0.994473        0 -0.104997" limited="true" range="-99999.9  99999.9" ref="0"></joint>
+          <joint name="ra_unrotscap_r2_d" type="hinge" pos="0 0 0" axis="  0.0153 0.989299  -0.1451" limited="true" range="-99999.9  99999.9" ref="0"></joint>
+          <body name="RA_scapula" pos="       0        0        0" quat="       1        0        0        0">
+            <geom name="RA_scapula_scapula" type="mesh" mesh="scapula"></geom>
+            <joint name="ra_acromioclavicular_r2_d" type="hinge" pos="0 0 0" axis="0.157095 0.947269 -0.279291" limited="true" range="-99999.9  99999.9" ref="0"></joint>
+            <joint name="ra_acromioclavicular_r3_d" type="hinge" pos="0 0 0" axis="-0.754084 0.297594 0.585487" limited="true" range="-99999.9  99999.9" ref="0"></joint>
+            <joint name="ra_acromioclavicular_r1_d" type="hinge" pos="0 0 0" axis="  0.6377   0.1186   0.7611" limited="true" range="-99999.9  99999.9" ref="0"></joint>
+            <body name="RA_scapphant" pos="-0.00955   -0.034    0.009" quat="       1        0        0        0">
+              <joint name="ra_unrothum_r1_d" type="hinge" pos="0 0 0" axis="  0.6377   0.1186   0.7611" limited="false" range="-99999.9  99999.9" ref="0"></joint>
+              <joint name="ra_unrothum_r3_d" type="hinge" pos="0 0 0" axis="-0.754084 0.297594 0.585487" limited="false" range="-99999.9  99999.9" ref="0"></joint>
+              <joint name="ra_unrothum_r2_d" type="hinge" pos="0 0 0" axis="0.157095 0.947269 -0.279291" limited="false" range="-99999.9  99999.9" ref="0"></joint>
+              <body name="RA1H_PHANT" pos="       0        0        0" quat="       1        0        0        0">
+                <joint name="ra_sh_elv_angle" type="hinge" pos="0 0 0" axis="  0.0048 0.999089   0.0424" limited="true" range=" -1.5708  2.26893" ref="0"></joint>
+                <body name="RA1H_PHANT1" pos="       0        0        0" quat="       1        0        0        0">
+                  <joint name="ra_sh_elv" type="hinge" pos="0 0 0" axis="-0.998261   0.0023 0.058898" limited="true" range="       0  3.14159" ref="0"></joint>
+                  <joint name="ra_shoulder1_r2_d" type="hinge" pos="0 0 0" axis="  0.0048 0.999089   0.0424" limited="false" range="-99999.9  99999.9" ref="0"></joint>
+                  <body name="RA1H" pos="       0        0        0" quat="       1        0        0        0">
+                    <geom name="RA1H_humerus" type="mesh" mesh="humerus"></geom>
+                    <joint name="ra_sh_rot" type="hinge" pos="0 0 0" axis="  0.0048 0.999089   0.0424" limited="true" range=" -1.5708 0.349066" ref="0"></joint>
+                    <body name="RA2U" pos="  0.0061  -0.2904  -0.0123" quat="       1        0        0        0">
+                      <geom name="RA2U_ulna" type="mesh" mesh="ulna"></geom>
+                      <joint name="ra_el_e_f" type="hinge" pos="0 0 0" axis="  0.0494   0.0366 0.998108" limited="true" range="       0  2.26893" ref="0"></joint>
+                      <body name="RA2R" pos="  0.0004 -0.011503 0.019999" quat="       1        0        0        0">
+                        <geom name="RA2R_radius" type="mesh" mesh="radius"></geom>
+                        <joint name="ra_wr_sup_pro" type="hinge" pos="0 0 0" axis="-0.017161 0.992666 -0.119668" limited="true" range=" -1.5708   1.5708" ref="0"></joint>
+                        <body name="RA3L" pos="   0.018   -0.242    0.025" quat="       1        0        0        0">
+                          <geom name="RA3L_lunate" type="mesh" mesh="lunate"></geom>
+                          <joint name="ra_wr_rd_ud" type="hinge" pos="0 0 0" axis="-0.819064 -0.135611 -0.557444" limited="true" range="-0.174533 0.436332" ref="0"></joint>
+                          <joint name="ra_wr_e_f" type="hinge" pos="0 0 0" axis="0.956427 -0.252207 0.147104" limited="true" range="-0.785398 0.785398" ref="0"></joint>
+                          <body name="RA3C" pos="0.003992 -0.015054 0.002327" quat="       1        0        0        0">
+                            <geom name="RA3C_capitate" type="mesh" mesh="capitate"></geom>
+                            <joint name="ra_proximal_distal_r1_d" type="hinge" pos="0 0 0" axis="0.899136 -0.349053 -0.26404" limited="false" range="-99999.9  99999.9" ref="0"></joint>
+                            <joint name="ra_proximal_distal_r3_d" type="hinge" pos="0 0 0" axis="0.997119   0.0107 -0.075101" limited="false" range="-99999.9  99999.9" ref="0"></joint>
+                            <body name="RA3T" pos="0.015293 -0.004569 -0.010308" quat="       1        0        0        0">
+                              <geom name="RA3T_trapezium" type="mesh" mesh="trapezium"></geom>
+                              <body name="RA4M1_PHANT" pos="       0        0        0" quat="       1        0        0        0">
+                                <joint name="ra_cmc1_f_e" type="hinge" pos="0 0 0" axis="-0.042399 -0.665286 0.745384" limited="true" range="-0.261799 0.785398" ref="0"></joint>
+                                <joint name="ra_cmc1_opp" type="hinge" pos="0 0 0" axis="-0.666698 0.618929 0.415261" limited="true" range="-0.785398 0.785398" ref="0"></joint>
+                                <body name="RA4M1" pos="  0.0072  -0.0054  -0.0025" quat="       1        0        0        0">
+                                  <geom name="RA4M1_1mc" type="mesh" mesh="1mc"></geom>
+                                  <joint name="ra_cmc1_ad_ab" type="hinge" pos="0 0 0" axis="0.495557 0.731736 0.467959" limited="true" range="-0.436332 0.436332" ref="0"></joint>
+                                  <body name="RA5P1" pos="  0.0165  -0.0292  -0.0127" quat="       1        0        0        0">
+                                    <geom name="RA5P1_thumbprox" type="mesh" mesh="thumbprox"></geom>
+                                    <joint name="ra_mcp1_e_f" type="hinge" pos="0 0 0" axis="       0      0.2       -1" limited="true" range="-0.523599 0.698132" ref="0"></joint>
+                                    <body name="RA6D1" pos="   0.014  -0.0259  -0.0101" quat="       1        0        0        0">
+                                      <geom name="RA6D1_thumbdist" type="mesh" mesh="thumbdist"></geom>
+                                      <joint name="ra_ip1_e_f" type="hinge" pos="0 0 0" axis="0.050102 0.479623 -0.876043" limited="true" range="  -1.309    1.309" ref="0"></joint>
+                                    </body>
+                                  </body>
+                                </body>
+                              </body>
+                            </body>
+                            <body name="RA3O" pos="0.009143 -0.004062 -0.002464" quat="       1        0        0        0">
+                              <geom name="RA3O_trapezoid" type="mesh" mesh="trapezoid"></geom>
+                            </body>
+                            <body name="RA3H" pos="-0.010969 -0.002495 -0.00075" quat="       1        0        0        0">
+                              <geom name="RA3H_hamate" type="mesh" mesh="hamate"></geom>
+                            </body>
+                            <body name="RA4M2" pos="0.014685 -0.03762 0.005032" quat="       1        0        0        0">
+                              <geom name="RA4M2_2mc" type="mesh" mesh="2mc"></geom>
+                              <body name="RA5P2" pos="0.003501 -0.028243  0.00362" quat="       1        0        0        0">
+                                <geom name="RA5P2_2proxph" type="mesh" mesh="2proxph"></geom>
+                                <joint name="ra_mcp2_e_f" type="hinge" pos="0 0 0" axis="0.984719 -0.0504013 -0.166695" limited="true" range="-0.872665   1.5708" ref="0"></joint>
+                                <joint name="ra_mcp2_ad_ab" type="hinge" pos="0 0 0" axis=" 0.17286 0.166696 0.970738" limited="true" range="-0.261799 0.521799" ref="0"></joint>
+                                <body name="RA6M2" pos="0.007517 -0.041273 0.007326" quat="       1        0        0        0">
+                                  <geom name="RA6M2_2midph" type="mesh" mesh="2midph"></geom>
+                                  <joint name="ra_pip2_e_f" type="hinge" pos="0 0 0" axis="0.978472 0.212999 -0.0849899" limited="true" range="       0   2.0944" ref="0"></joint>
+                                  <body name="RA7D2" pos="0.003333 -0.024888  0.00122" quat="       1        0        0        0">
+                                    <geom name="RA7D2_2distph" type="mesh" mesh="2distph"></geom>
+                                    <joint name="ra_dip2_e_f" type="hinge" pos="0 0 0" axis=" 1.08526 0.126951 -0.0780756" limited="true" range="-0.523599   1.5708" ref="0"></joint>
+                                  </body>
+                                </body>
+                              </body>
+                            </body>
+                            <body name="RA4M3" pos="0.000477 -0.039239 0.007377" quat="       1        0        0        0">
+                              <geom name="RA4M3_3mc" type="mesh" mesh="3mc"></geom>
+                              <body name="RA5P3" pos=" 0.00024 -0.02629 0.001778" quat="       1        0        0        0">
+                                <geom name="RA5P3_3proxph" type="mesh" mesh="3proxph"></geom>
+                                <joint name="ra_mcp3_e_f" type="hinge" pos="0 0 0" axis="       1        0        0" limited="true" range="-0.872665   1.5708" ref="0"></joint>
+                                <joint name="ra_mcp3_rd_ud" type="hinge" pos="0 0 0" axis="       0     -0.5       -1" limited="true" range="-0.261799 0.261799" ref="0"></joint>
+                                <body name="RA6M3" pos=" 0.00165 -0.044211  0.00623" quat="       1        0        0        0">
+                                  <geom name="RA6M3_3midph" type="mesh" mesh="3midph"></geom>
+                                  <joint name="ra_pip3_e_f" type="hinge" pos="0 0 0" axis="       1        0        0" limited="true" range="       0   2.0944" ref="0"></joint>
+                                  <body name="RA7D3" pos="0.001365 -0.029047 0.001954" quat="       1        0        0        0">
+                                    <geom name="RA7D3_3distph" type="mesh" mesh="3distph"></geom>
+                                    <joint name="ra_dip3_e_f" type="hinge" pos="0 0 0" axis="       1      0.1        0" limited="true" range="-0.523599   1.5708" ref="0"></joint>
+                                  </body>
+                                </body>
+                              </body>
+                            </body>
+                            <body name="RA4M4" pos="-0.012046 -0.040519 0.003513" quat="       1        0        0        0">
+                              <geom name="RA4M4_4mc" type="mesh" mesh="4mc"></geom>
+                              <body name="RA5P4" pos="-0.00183 -0.023689 -0.000173" quat="       1        0        0        0">
+                                <geom name="RA5P4_4proxph" type="mesh" mesh="4proxph"></geom>
+                                <joint name="ra_mcp4_e_f" type="hinge" pos="0 0 0" axis="       1    -0.05      0.1" limited="true" range="-0.872665   1.5708" ref="0"></joint>
+                                <joint name="ra_mcp4_ad_ab" type="hinge" pos="0 0 0" axis="     0.1     -0.7       -1" limited="true" range="-0.261799 0.261799" ref="0"></joint>
+                                <body name="RA6M4" pos="-0.003528 -0.040255 0.001345" quat="       1        0        0        0">
+                                  <geom name="RA6M4_4midph" type="mesh" mesh="4midph"></geom>
+                                  <joint name="ra_pip4_e_f" type="hinge" pos="0 0 0" axis=" 1.02358 0.0657561 0.384647" limited="true" range="       0   2.0944" ref="0"></joint>
+                                  <body name="RA7D4" pos="-0.002317 -0.024789 0.000563" quat="       1        0        0        0">
+                                    <geom name="RA7D4_4distph" type="mesh" mesh="4distph"></geom>
+                                    <joint name="ra_dip4_e_f" type="hinge" pos="0 0 0" axis="0.981361 -0.0848745 0.538262" limited="true" range="-0.523599   1.5708" ref="0"></joint>
+                                  </body>
+                                </body>
+                              </body>
+                            </body>
+                            <body name="RA4M5" pos="-0.021896 -0.034683 -0.004218" quat="       1        0        0        0">
+                              <geom name="RA4M5_5mc" type="mesh" mesh="5mc"></geom>
+                              <body name="RA5P5" pos="-0.001597 -0.021431 -0.001496" quat="       1        0        0        0">
+                                <geom name="RA5P5_5proxph" type="mesh" mesh="5proxph"></geom>
+                                <joint name="ra_mcp5_e_f" type="hinge" pos="0 0 0" axis=" 1.10361 -0.0321858 0.530107" limited="true" range="-0.872665   1.5708" ref="0"></joint>
+                                <joint name="ra_mcp5_ad_ab" type="hinge" pos="0 0 0" axis="0.516443 -0.201977 -1.08742" limited="true" range="-0.261799 0.521799" ref="0"></joint>
+                                <body name="RA6M5" pos="-0.005279 -0.035563 -0.002879" quat="       1        0        0        0">
+                                  <geom name="RA6M5_5midph" type="mesh" mesh="5midph"></geom>
+                                  <joint name="ra_pip5_e_f" type="hinge" pos="0 0 0" axis="       1     -0.2      0.6" limited="true" range="       0   2.0944" ref="0"></joint>
+                                  <body name="RA7D5" pos="-0.002871 -0.020677 -0.002243" quat="       1        0        0        0">
+                                    <geom name="RA7D5_5distph" type="mesh" mesh="5distph"></geom>
+                                    <joint name="ra_dip5_e_f" type="hinge" pos="0 0 0" axis="       1     -0.2      0.9" limited="true" range="-0.523599   1.5708" ref="0"></joint>
+                                  </body>
+                                </body>
+                              </body>
+                            </body>
+                          </body>
+                          <body name="RA3S" pos="0.012345 -0.004464 -0.001254" quat="       1        0        0        0">
+                            <geom name="RA3S_scaphoid" type="mesh" mesh="scaphoid"></geom>
+                          </body>
+                          <body name="RA3P" pos="-0.013388 -0.009886 -0.010593" quat="       1        0        0        0">
+                            <geom name="RA3P_pisiform" type="mesh" mesh="pisiform"></geom>
+                          </body>
+                          <body name="RA3Q" pos="-0.010784 -0.007499 -0.001289" quat="       1        0        0        0">
+                            <geom name="RA3Q_triquetrum" type="mesh" mesh="triquetrum"></geom>
+                          </body>
+                        </body>
+                      </body>
+                    </body>
+                  </body>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+  <asset>
+    <texture name="texplane" type="2d" builtin="checker" rgb1="0.631 0.533 0.498" rgb2="0.471 0.565 0.612" width="100" height="100"></texture>
+    <texture name="texgeom" type="cube" builtin="flat" width="100" height="100" rgb1="0.816 0.706 0.663" rgb2="0.816 0.706 0.663" mark="cross" markrgb="1 1 1"></texture>
+    <texture builtin="gradient" height="100" rgb1="0.93 0.93 0.93" rgb2="0.259 0.259 0.259" type="skybox" width="100"></texture>
+    <material name="MatPlane" reflectance="0.1" texture="texplane" texrepeat="10 10" texuniform="true"></material>
+    <material name="geom" texture="texgeom" texuniform="true"></material>
+    <mesh name="thorax" file="Geometry/thorax.stl" scale="       1        1        1"></mesh>
+    <mesh name="clavicle" file="Geometry/clavicle.stl" scale="       1        1        1"></mesh>
+    <mesh name="scapula" file="Geometry/scapula.stl" scale="       1        1        1"></mesh>
+    <mesh name="humerus" file="Geometry/humerus.stl" scale="       1        1        1"></mesh>
+    <mesh name="ulna" file="Geometry/ulna.stl" scale="       1        1        1"></mesh>
+    <mesh name="radius" file="Geometry/radius.stl" scale="       1        1        1"></mesh>
+    <mesh name="lunate" file="Geometry/lunate.stl" scale="       1        1        1"></mesh>
+    <mesh name="capitate" file="Geometry/capitate.stl" scale="       1        1        1"></mesh>
+    <mesh name="trapezium" file="Geometry/trapezium.stl" scale="       1        1        1"></mesh>
+    <mesh name="1mc" file="Geometry/1mc.stl" scale="       1        1        1"></mesh>
+    <mesh name="thumbprox" file="Geometry/thumbprox.stl" scale="       1        1        1"></mesh>
+    <mesh name="thumbdist" file="Geometry/thumbdist.stl" scale="       1        1        1"></mesh>
+    <mesh name="trapezoid" file="Geometry/trapezoid.stl" scale="       1        1        1"></mesh>
+    <mesh name="hamate" file="Geometry/hamate.stl" scale="       1        1        1"></mesh>
+    <mesh name="2mc" file="Geometry/2mc.stl" scale="       1        1        1"></mesh>
+    <mesh name="2proxph" file="Geometry/2proxph.stl" scale="       1        1        1"></mesh>
+    <mesh name="2midph" file="Geometry/2midph.stl" scale="       1        1        1"></mesh>
+    <mesh name="2distph" file="Geometry/2distph.stl" scale="       1        1        1"></mesh>
+    <mesh name="3mc" file="Geometry/3mc.stl" scale="       1        1        1"></mesh>
+    <mesh name="3proxph" file="Geometry/3proxph.stl" scale="       1        1        1"></mesh>
+    <mesh name="3midph" file="Geometry/3midph.stl" scale="       1        1        1"></mesh>
+    <mesh name="3distph" file="Geometry/3distph.stl" scale="       1        1        1"></mesh>
+    <mesh name="4mc" file="Geometry/4mc.stl" scale="       1        1        1"></mesh>
+    <mesh name="4proxph" file="Geometry/4proxph.stl" scale="       1        1        1"></mesh>
+    <mesh name="4midph" file="Geometry/4midph.stl" scale="       1        1        1"></mesh>
+    <mesh name="4distph" file="Geometry/4distph.stl" scale="       1        1        1"></mesh>
+    <mesh name="5mc" file="Geometry/5mc.stl" scale="       1        1        1"></mesh>
+    <mesh name="5proxph" file="Geometry/5proxph.stl" scale="       1        1        1"></mesh>
+    <mesh name="5midph" file="Geometry/5midph.stl" scale="       1        1        1"></mesh>
+    <mesh name="5distph" file="Geometry/5distph.stl" scale="       1        1        1"></mesh>
+    <mesh name="scaphoid" file="Geometry/scaphoid.stl" scale="       1        1        1"></mesh>
+    <mesh name="pisiform" file="Geometry/pisiform.stl" scale="       1        1        1"></mesh>
+    <mesh name="triquetrum" file="Geometry/triquetrum.stl" scale="       1        1        1"></mesh>
+  </asset>
+  <tendon>
+  </tendon>
+  <actuator>
+  </actuator>
+  <equality>
+    <joint name="ra_sternoclavicular_r2_con" joint1="ra_sternoclavicular_r2_d" joint2="ra_sh_elv" active="true" polycoef="       0 -0.242001        0        0        0" solimp="0.9999 0.9999 0.001 0.5 2"></joint>
+    <joint name="ra_sternoclavicular_r3_con" joint1="ra_sternoclavicular_r3_d" joint2="ra_sh_elv" active="true" polycoef="       0   0.1025        0        0        0" solimp="0.9999 0.9999 0.001 0.5 2"></joint>
+    <joint name="ra_unrotscap_r2_con" joint1="ra_unrotscap_r2_d" joint2="ra_sh_elv" active="true" polycoef="       0 0.242001        0        0        0" solimp="0.9999 0.9999 0.001 0.5 2"></joint>
+    <joint name="ra_unrotscap_r3_con" joint1="ra_unrotscap_r3_d" joint2="ra_sh_elv" active="true" polycoef="       0  -0.1025        0        0        0" solimp="0.9999 0.9999 0.001 0.5 2"></joint>
+    <joint name="ra_acromioclavicular_r1_con" joint1="ra_acromioclavicular_r1_d" joint2="ra_sh_elv" active="true" polycoef="       0    0.178        0        0        0" solimp="0.9999 0.9999 0.001 0.5 2"></joint>
+    <joint name="ra_acromioclavicular_r2_con" joint1="ra_acromioclavicular_r2_d" joint2="ra_sh_elv" active="true" polycoef="       0 -0.0490002        0        0        0" solimp="0.9999 0.9999 0.001 0.5 2"></joint>
+    <joint name="ra_acromioclavicular_r3_con" joint1="ra_acromioclavicular_r3_d" joint2="ra_sh_elv" active="true" polycoef="       0 0.396002        0        0        0" solimp="0.9999 0.9999 0.001 0.5 2"></joint>
+    <joint name="ra_unrothum_r1_con" joint1="ra_unrothum_r1_d" joint2="ra_sh_elv" active="true" polycoef="       0   -0.178        0        0        0" solimp="0.9999 0.9999 0.001 0.5 2"></joint>
+    <joint name="ra_unrothum_r2_con" joint1="ra_unrothum_r2_d" joint2="ra_sh_elv" active="true" polycoef="       0 0.0490002        0        0        0" solimp="0.9999 0.9999 0.001 0.5 2"></joint>
+    <joint name="ra_unrothum_r3_con" joint1="ra_unrothum_r3_d" joint2="ra_sh_elv" active="true" polycoef="       0 -0.396002        0        0        0" solimp="0.9999 0.9999 0.001 0.5 2"></joint>
+    <joint name="ra_shoulder1_r2_con" joint1="ra_shoulder1_r2_d" joint2="ra_sh_elv_angle" active="true" polycoef="       0       -1        0        0        0" solimp="0.9999 0.9999 0.001 0.5 2"></joint>
+    <joint name="ra_proximal_distal_r1_con" joint1="ra_proximal_distal_r1_d" joint2="ra_wr_rd_ud" active="true" polycoef="       0  1.35714 -0.818507        0        0" solimp="0.9999 0.9999 0.001 0.5 2"></joint>
+    <joint name="ra_proximal_distal_r3_con" joint1="ra_proximal_distal_r3_d" joint2="ra_wr_e_f" active="true" polycoef="       0      0.5        0        0        0" solimp="0.9999 0.9999 0.001 0.5 2"></joint>
+    <joint name="Thorax_rot1_constraint" active="true" joint1="Thorax_rot1" polycoef="       0        0        0        0        0"></joint>
+    <joint name="Thorax_rot2_constraint" active="true" joint1="Thorax_rot2" polycoef="       0        0        0        0        0"></joint>
+    <joint name="Thorax_rot3_constraint" active="true" joint1="Thorax_rot3" polycoef="       0        0        0        0        0"></joint>
+    <weld name="origin_to_worldbody" body1="Thorax" active="false"></weld>
+  </equality>
+</mujoco>

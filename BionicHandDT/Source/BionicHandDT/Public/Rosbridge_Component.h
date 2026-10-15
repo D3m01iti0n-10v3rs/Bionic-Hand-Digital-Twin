@@ -4,9 +4,9 @@
 #include "IWebSocket.h"
 #include "Rosbridge_Component.generated.h"
 
-DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FOnRosMessage, const FString&, Topic, const FString&, MsgJson);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FOnRosMessage, const FString&, Topic, const FString&, MsgJson); // create event
 
-UCLASS(ClassGroup = (Custom), meta = (BlueprintSpawnableComponent))
+UCLASS(ClassGroup = (Custom), meta = (BlueprintSpawnableComponent)) // register the class with unreal
 class BIONICHANDDT_API URosbridgeComponent : public UActorComponent{
     GENERATED_BODY()
 

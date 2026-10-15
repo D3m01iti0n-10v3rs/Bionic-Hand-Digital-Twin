@@ -3,3 +3,6 @@ BionicHandDT/Binaries/
 BionicHandDT/Intermediate/
 BionicHandDT/Saved/
 BionicHandDT/DerivedDataCache/
+
+simu/osim_env
+simu/__pycache__

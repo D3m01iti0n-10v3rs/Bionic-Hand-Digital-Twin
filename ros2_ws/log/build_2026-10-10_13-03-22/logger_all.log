@@ -1,0 +1,143 @@
+[0.211s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--packages-select', 'supa_bridge']
+[0.212s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=12, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['supa_bridge'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x766136f1c890>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x766136f1c590>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x766136f1c590>>)
+[0.273s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.275s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.276s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.277s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.277s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.279s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.281s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/mnt/d/doan2_realz/shit_for_git/ros2_ws'
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.344s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.345s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.360s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.364s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.365s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.367s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.370s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.371s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.373s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.374s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.375s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.376s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.381s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.382s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.384s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.395s] Level 1:colcon.colcon_core.package_identification:_identify(src/supa_bridge) by extensions ['ignore', 'ignore_ament_install']
+[0.396s] Level 1:colcon.colcon_core.package_identification:_identify(src/supa_bridge) by extension 'ignore'
+[0.399s] Level 1:colcon.colcon_core.package_identification:_identify(src/supa_bridge) by extension 'ignore_ament_install'
+[0.403s] Level 1:colcon.colcon_core.package_identification:_identify(src/supa_bridge) by extensions ['colcon_pkg']
+[0.404s] Level 1:colcon.colcon_core.package_identification:_identify(src/supa_bridge) by extension 'colcon_pkg'
+[0.405s] Level 1:colcon.colcon_core.package_identification:_identify(src/supa_bridge) by extensions ['colcon_meta']
+[0.406s] Level 1:colcon.colcon_core.package_identification:_identify(src/supa_bridge) by extension 'colcon_meta'
+[0.409s] Level 1:colcon.colcon_core.package_identification:_identify(src/supa_bridge) by extensions ['ros']
+[0.410s] Level 1:colcon.colcon_core.package_identification:_identify(src/supa_bridge) by extension 'ros'
+[0.438s] DEBUG:colcon.colcon_core.package_identification:Package 'src/supa_bridge' with type 'ros.ament_cmake' and name 'supa_bridge'
+[0.445s] Level 1:colcon.colcon_core.package_identification:_identify(src/uart_ros2) by extensions ['ignore', 'ignore_ament_install']
+[0.446s] Level 1:colcon.colcon_core.package_identification:_identify(src/uart_ros2) by extension 'ignore'
+[0.447s] Level 1:colcon.colcon_core.package_identification:_identify(src/uart_ros2) by extension 'ignore_ament_install'
+[0.452s] Level 1:colcon.colcon_core.package_identification:_identify(src/uart_ros2) by extensions ['colcon_pkg']
+[0.453s] Level 1:colcon.colcon_core.package_identification:_identify(src/uart_ros2) by extension 'colcon_pkg'
+[0.456s] Level 1:colcon.colcon_core.package_identification:_identify(src/uart_ros2) by extensions ['colcon_meta']
+[0.458s] Level 1:colcon.colcon_core.package_identification:_identify(src/uart_ros2) by extension 'colcon_meta'
+[0.461s] Level 1:colcon.colcon_core.package_identification:_identify(src/uart_ros2) by extensions ['ros']
+[0.462s] Level 1:colcon.colcon_core.package_identification:_identify(src/uart_ros2) by extension 'ros'
+[0.483s] DEBUG:colcon.colcon_core.package_identification:Package 'src/uart_ros2' with type 'ros.ament_cmake' and name 'uart_ros2'
+[0.483s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.484s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.485s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.485s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.486s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.539s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'uart_ros2' in 'src/uart_ros2'
+[0.541s] Level 5:colcon.colcon_core.verb:set package 'supa_bridge' build argument 'cmake_args' from command line to 'None'
+[0.541s] Level 5:colcon.colcon_core.verb:set package 'supa_bridge' build argument 'cmake_target' from command line to 'None'
+[0.542s] Level 5:colcon.colcon_core.verb:set package 'supa_bridge' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.543s] Level 5:colcon.colcon_core.verb:set package 'supa_bridge' build argument 'cmake_clean_cache' from command line to 'False'
+[0.543s] Level 5:colcon.colcon_core.verb:set package 'supa_bridge' build argument 'cmake_clean_first' from command line to 'False'
+[0.544s] Level 5:colcon.colcon_core.verb:set package 'supa_bridge' build argument 'cmake_force_configure' from command line to 'False'
+[0.545s] Level 5:colcon.colcon_core.verb:set package 'supa_bridge' build argument 'ament_cmake_args' from command line to 'None'
+[0.545s] Level 5:colcon.colcon_core.verb:set package 'supa_bridge' build argument 'catkin_cmake_args' from command line to 'None'
+[0.546s] Level 5:colcon.colcon_core.verb:set package 'supa_bridge' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.547s] DEBUG:colcon.colcon_core.verb:Building package 'supa_bridge' with the following arguments: {'ament_cmake_args': None, 'build_base': '/mnt/d/doan2_realz/shit_for_git/ros2_ws/build/supa_bridge', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/mnt/d/doan2_realz/shit_for_git/ros2_ws/install/supa_bridge', 'merge_install': False, 'path': '/mnt/d/doan2_realz/shit_for_git/ros2_ws/src/supa_bridge', 'symlink_install': False, 'test_result_base': None}
+[0.548s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.551s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.553s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/mnt/d/doan2_realz/shit_for_git/ros2_ws/src/supa_bridge' with build type 'ament_cmake'
+[0.554s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/mnt/d/doan2_realz/shit_for_git/ros2_ws/src/supa_bridge'
+[0.559s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.561s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.679s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/mnt/d/doan2_realz/shit_for_git/ros2_ws/build/supa_bridge': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /mnt/d/doan2_realz/shit_for_git/ros2_ws/src/supa_bridge -DCMAKE_INSTALL_PREFIX=/mnt/d/doan2_realz/shit_for_git/ros2_ws/install/supa_bridge
+[24.683s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/mnt/d/doan2_realz/shit_for_git/ros2_ws/build/supa_bridge' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /mnt/d/doan2_realz/shit_for_git/ros2_ws/src/supa_bridge -DCMAKE_INSTALL_PREFIX=/mnt/d/doan2_realz/shit_for_git/ros2_ws/install/supa_bridge
+[24.697s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/mnt/d/doan2_realz/shit_for_git/ros2_ws/build/supa_bridge': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /mnt/d/doan2_realz/shit_for_git/ros2_ws/build/supa_bridge -- -j12 -l12
+[47.554s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/mnt/d/doan2_realz/shit_for_git/ros2_ws/build/supa_bridge' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /mnt/d/doan2_realz/shit_for_git/ros2_ws/build/supa_bridge -- -j12 -l12
+[47.609s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/mnt/d/doan2_realz/shit_for_git/ros2_ws/build/supa_bridge': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /mnt/d/doan2_realz/shit_for_git/ros2_ws/build/supa_bridge
+[50.077s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(supa_bridge)
+[50.084s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/mnt/d/doan2_realz/shit_for_git/ros2_ws/build/supa_bridge' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /mnt/d/doan2_realz/shit_for_git/ros2_ws/build/supa_bridge
+[50.095s] Level 1:colcon.colcon_core.environment:checking '/mnt/d/doan2_realz/shit_for_git/ros2_ws/install/supa_bridge' for CMake module files
+[50.212s] Level 1:colcon.colcon_core.environment:checking '/mnt/d/doan2_realz/shit_for_git/ros2_ws/install/supa_bridge' for CMake config files
+[50.297s] Level 1:colcon.colcon_core.shell:create_environment_hook('supa_bridge', 'cmake_prefix_path')
+[50.298s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/mnt/d/doan2_realz/shit_for_git/ros2_ws/install/supa_bridge/share/supa_bridge/hook/cmake_prefix_path.dsv'
+[50.318s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/d/doan2_realz/shit_for_git/ros2_ws/install/supa_bridge/share/supa_bridge/hook/cmake_prefix_path.sh'
+[50.343s] Level 1:colcon.colcon_core.environment:checking '/mnt/d/doan2_realz/shit_for_git/ros2_ws/install/supa_bridge/lib'
+[50.349s] Level 1:colcon.colcon_core.environment:checking '/mnt/d/doan2_realz/shit_for_git/ros2_ws/install/supa_bridge/bin'
+[50.352s] Level 1:colcon.colcon_core.environment:checking '/mnt/d/doan2_realz/shit_for_git/ros2_ws/install/supa_bridge/lib/pkgconfig/supa_bridge.pc'
+[50.359s] Level 1:colcon.colcon_core.environment:checking '/mnt/d/doan2_realz/shit_for_git/ros2_ws/install/supa_bridge/lib/python3.12/site-packages'
+[50.363s] Level 1:colcon.colcon_core.environment:checking '/mnt/d/doan2_realz/shit_for_git/ros2_ws/install/supa_bridge/bin'
+[50.367s] INFO:colcon.colcon_core.shell:Creating package descriptor '/mnt/d/doan2_realz/shit_for_git/ros2_ws/install/supa_bridge/share/supa_bridge/package.dsv'
+[50.386s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/d/doan2_realz/shit_for_git/ros2_ws/install/supa_bridge/share/supa_bridge/package.sh'
+[50.407s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/d/doan2_realz/shit_for_git/ros2_ws/install/supa_bridge/share/supa_bridge/package.bash'
+[50.425s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/d/doan2_realz/shit_for_git/ros2_ws/install/supa_bridge/share/supa_bridge/package.zsh'
+[50.444s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/mnt/d/doan2_realz/shit_for_git/ros2_ws/install/supa_bridge/share/colcon-core/packages/supa_bridge)
+[50.482s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(supa_bridge)
+[50.483s] Level 1:colcon.colcon_core.environment:checking '/mnt/d/doan2_realz/shit_for_git/ros2_ws/install/supa_bridge' for CMake module files
+[50.607s] Level 1:colcon.colcon_core.environment:checking '/mnt/d/doan2_realz/shit_for_git/ros2_ws/install/supa_bridge' for CMake config files
+[50.695s] Level 1:colcon.colcon_core.shell:create_environment_hook('supa_bridge', 'cmake_prefix_path')
+[50.696s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/mnt/d/doan2_realz/shit_for_git/ros2_ws/install/supa_bridge/share/supa_bridge/hook/cmake_prefix_path.dsv'
+[50.714s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/d/doan2_realz/shit_for_git/ros2_ws/install/supa_bridge/share/supa_bridge/hook/cmake_prefix_path.sh'
+[50.735s] Level 1:colcon.colcon_core.environment:checking '/mnt/d/doan2_realz/shit_for_git/ros2_ws/install/supa_bridge/lib'
+[50.740s] Level 1:colcon.colcon_core.environment:checking '/mnt/d/doan2_realz/shit_for_git/ros2_ws/install/supa_bridge/bin'
+[50.742s] Level 1:colcon.colcon_core.environment:checking '/mnt/d/doan2_realz/shit_for_git/ros2_ws/install/supa_bridge/lib/pkgconfig/supa_bridge.pc'
+[50.744s] Level 1:colcon.colcon_core.environment:checking '/mnt/d/doan2_realz/shit_for_git/ros2_ws/install/supa_bridge/lib/python3.12/site-packages'
+[50.748s] Level 1:colcon.colcon_core.environment:checking '/mnt/d/doan2_realz/shit_for_git/ros2_ws/install/supa_bridge/bin'
+[50.750s] INFO:colcon.colcon_core.shell:Creating package descriptor '/mnt/d/doan2_realz/shit_for_git/ros2_ws/install/supa_bridge/share/supa_bridge/package.dsv'
+[50.768s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/d/doan2_realz/shit_for_git/ros2_ws/install/supa_bridge/share/supa_bridge/package.sh'
+[50.784s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/d/doan2_realz/shit_for_git/ros2_ws/install/supa_bridge/share/supa_bridge/package.bash'
+[50.799s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/d/doan2_realz/shit_for_git/ros2_ws/install/supa_bridge/share/supa_bridge/package.zsh'
+[50.813s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/mnt/d/doan2_realz/shit_for_git/ros2_ws/install/supa_bridge/share/colcon-core/packages/supa_bridge)
+[50.825s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[50.826s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[50.827s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[50.828s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[50.955s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[50.956s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[50.956s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[50.957s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[50.963s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Notifications was not provided by any .service files
+[50.965s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[50.966s] INFO:colcon.colcon_core.shell:Creating prefix script '/mnt/d/doan2_realz/shit_for_git/ros2_ws/install/local_setup.sh'
+[50.974s] INFO:colcon.colcon_core.shell:Creating prefix util module '/mnt/d/doan2_realz/shit_for_git/ros2_ws/install/_local_setup_util_sh.py'
+[50.985s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/mnt/d/doan2_realz/shit_for_git/ros2_ws/install/setup.sh'
+[50.993s] INFO:colcon.colcon_core.shell:Creating prefix script '/mnt/d/doan2_realz/shit_for_git/ros2_ws/install/local_setup.bash'
+[51.000s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/mnt/d/doan2_realz/shit_for_git/ros2_ws/install/setup.bash'
+[51.009s] INFO:colcon.colcon_core.shell:Creating prefix script '/mnt/d/doan2_realz/shit_for_git/ros2_ws/install/local_setup.zsh'
+[51.016s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/mnt/d/doan2_realz/shit_for_git/ros2_ws/install/setup.zsh'

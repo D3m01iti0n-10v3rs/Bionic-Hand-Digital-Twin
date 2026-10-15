@@ -1,0 +1,13 @@
+shape,d_mm,r_index,hit_index,ctrl_index,r_middle,hit_middle,ctrl_middle,r_ring,hit_ring,ctrl_ring,r_pinky,hit_pinky,ctrl_pinky
+sphere,30,0.92,True,60.0,0.89,True,60.0,0.99,True,60.0,1.0,False,60.0
+sphere,40,0.82,True,60.1,0.81,True,60.1,0.85,True,60.0,0.83,True,60.1
+sphere,50,0.75,True,64.2,0.74,True,64.2,0.76,True,62.9,0.68,True,71.2
+sphere,60,0.68,True,71.2,0.68,True,70.3,0.68,True,71.0,0.58,True,81.6
+sphere,70,0.63,True,76.3,0.63,True,75.5,0.62,True,77.2,0.51,True,89.2
+sphere,80,0.58,True,81.6,0.58,True,80.8,0.57,True,82.5,0.46,True,94.7
+cylinder,30,0.91,True,60.0,0.87,True,60.0,0.85,True,60.0,0.79,True,60.1
+cylinder,40,0.81,True,60.1,0.79,True,60.1,0.77,True,61.9,0.68,True,71.2
+cylinder,50,0.73,True,66.2,0.73,True,65.2,0.7,True,68.9,0.6,True,79.5
+cylinder,60,0.67,True,72.2,0.67,True,71.4,0.64,True,75.1,0.53,True,87.0
+cylinder,70,0.61,True,78.4,0.62,True,76.6,0.59,True,80.3,0.48,True,92.5
+cylinder,80,0.56,True,83.7,0.58,True,80.8,0.55,True,84.6,0.43,True,98.2

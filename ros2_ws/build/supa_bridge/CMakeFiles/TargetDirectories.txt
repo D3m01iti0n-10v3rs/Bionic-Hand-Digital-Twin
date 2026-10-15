@@ -1,0 +1,10 @@
+/mnt/d/doan2_realz/shit_for_git/ros2_ws/build/supa_bridge/CMakeFiles/uninstall.dir
+/mnt/d/doan2_realz/shit_for_git/ros2_ws/build/supa_bridge/CMakeFiles/supa_bridge_uninstall.dir
+/mnt/d/doan2_realz/shit_for_git/ros2_ws/build/supa_bridge/CMakeFiles/supa_bridge.dir
+/mnt/d/doan2_realz/shit_for_git/ros2_ws/build/supa_bridge/CMakeFiles/test.dir
+/mnt/d/doan2_realz/shit_for_git/ros2_ws/build/supa_bridge/CMakeFiles/edit_cache.dir
+/mnt/d/doan2_realz/shit_for_git/ros2_ws/build/supa_bridge/CMakeFiles/rebuild_cache.dir
+/mnt/d/doan2_realz/shit_for_git/ros2_ws/build/supa_bridge/CMakeFiles/list_install_components.dir
+/mnt/d/doan2_realz/shit_for_git/ros2_ws/build/supa_bridge/CMakeFiles/install.dir
+/mnt/d/doan2_realz/shit_for_git/ros2_ws/build/supa_bridge/CMakeFiles/install/local.dir
+/mnt/d/doan2_realz/shit_for_git/ros2_ws/build/supa_bridge/CMakeFiles/install/strip.dir

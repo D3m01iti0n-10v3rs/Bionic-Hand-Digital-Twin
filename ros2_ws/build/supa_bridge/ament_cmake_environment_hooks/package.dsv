@@ -1,0 +1,4 @@
+source;share/supa_bridge/local_setup.bash
+source;share/supa_bridge/local_setup.dsv
+source;share/supa_bridge/local_setup.sh
+source;share/supa_bridge/local_setup.zsh

@@ -1,0 +1,571 @@
+[0.000000] (-) TimerEvent: {}
+[0.002396] (-) JobUnselected: {'identifier': 'uart_ros2'}
+[0.003432] (supa_bridge) JobQueued: {'identifier': 'supa_bridge', 'dependencies': OrderedDict()}
+[0.005546] (supa_bridge) JobStarted: {'identifier': 'supa_bridge'}
+[0.050505] (supa_bridge) JobProgress: {'identifier': 'supa_bridge', 'progress': 'cmake'}
+[0.097941] (-) TimerEvent: {}
+[0.099267] (supa_bridge) Command: {'cmd': ['/usr/bin/cmake', '/mnt/d/doan2_realz/shit_for_git/ros2_ws/src/supa_bridge', '-DCMAKE_INSTALL_PREFIX=/mnt/d/doan2_realz/shit_for_git/ros2_ws/install/supa_bridge'], 'cwd': '/mnt/d/doan2_realz/shit_for_git/ros2_ws/build/supa_bridge', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'soppo', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'WT_PROFILE_ID': '{61c54bbd-c2c6-5271-96e7-009a87ff44bf}', 'HOME': '/home/soppo', 'OLDPWD': '/mnt/d/doan2_realz/shit_for_git/ros2_ws/src', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'WSL_DISTRO_NAME': 'Ubuntu-24.04', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/soppo/ros2_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'soppo', 'NAME': 'LAPTOP-RM3J4MJ6', 'WSL_INTEROP': '/run/WSL/350_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files (x86)/VMware/VMware Workstation/bin/:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/java8path:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Cloudflare/Cloudflare WARP/:/mnt/d/nodejs/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files (x86)/STMicroelectronics/STM32 ST-LINK Utility/ST-LINK Utility:/mnt/c/Program Files/PuTTY/:/mnt/c/Program Files/usbipd-win/:/mnt/e/Qt/Tools/mingw1310_64/bin:/mnt/d/Git/cmd:/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/:/mnt/d/Xilinx/Vivado/2023.2/tps/mingw/9.3.0/win64.o/nt/bin:/mnt/c/Program Files/Tailscale/:/mnt/d/MATLAB/R2023a/runtime/win64:/mnt/d/MATLAB/R2023a/bin:/mnt/c/Users/PC/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/PC/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/PC/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/PC/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/PC/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/PC/AppData/Roaming/npm:/mnt/e/MiKTeX/miktex/bin/x64/:/mnt/c/Users/PC/.dotnet/tools:/mnt/d/Xilinx/Vivado/2023.2/tps/mingw/9.3.0/win64.o/nt/bin:/mnt/d/flutter/bin:/mnt/c/Program Files (x86)/Nmap:/mnt/c/msys64/ucrt64/bin:/snap/bin', 'WT_SESSION': '2e7a18ef-a242-4c54-9138-65da22e72892', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/home/soppo/ros2_ws/install/uart_ros2:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/mnt/d/doan2_realz/shit_for_git/ros2_ws/build/supa_bridge', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'CMAKE_PREFIX_PATH': '/home/soppo/ros2_ws/install/uart_ros2:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy', 'WSLENV': 'WT_SESSION:WT_PROFILE_ID:'}), 'shell': False}
+[0.198449] (-) TimerEvent: {}
+[0.300251] (-) TimerEvent: {}
+[0.401704] (-) TimerEvent: {}
+[0.503880] (-) TimerEvent: {}
+[0.605628] (-) TimerEvent: {}
+[0.707318] (-) TimerEvent: {}
+[0.809234] (-) TimerEvent: {}
+[0.910752] (-) TimerEvent: {}
+[0.960143] (supa_bridge) StdoutLine: {'line': b'-- The C compiler identification is GNU 13.3.0\n'}
+[1.011052] (-) TimerEvent: {}
+[1.112846] (-) TimerEvent: {}
+[1.214518] (-) TimerEvent: {}
+[1.316042] (-) TimerEvent: {}
+[1.417610] (-) TimerEvent: {}
+[1.519184] (-) TimerEvent: {}
+[1.620846] (-) TimerEvent: {}
+[1.722820] (-) TimerEvent: {}
+[1.824679] (-) TimerEvent: {}
+[1.926013] (-) TimerEvent: {}
+[2.027619] (-) TimerEvent: {}
+[2.129249] (-) TimerEvent: {}
+[2.231204] (-) TimerEvent: {}
+[2.333187] (-) TimerEvent: {}
+[2.435021] (-) TimerEvent: {}
+[2.536950] (-) TimerEvent: {}
+[2.586137] (supa_bridge) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 13.3.0\n'}
+[2.637308] (-) TimerEvent: {}
+[2.738939] (-) TimerEvent: {}
+[2.840092] (-) TimerEvent: {}
+[2.941648] (-) TimerEvent: {}
+[3.044232] (-) TimerEvent: {}
+[3.146191] (-) TimerEvent: {}
+[3.249205] (-) TimerEvent: {}
+[3.350277] (-) TimerEvent: {}
+[3.451755] (-) TimerEvent: {}
+[3.553197] (-) TimerEvent: {}
+[3.654367] (-) TimerEvent: {}
+[3.756212] (-) TimerEvent: {}
+[3.857827] (-) TimerEvent: {}
+[3.902606] (supa_bridge) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[3.958091] (-) TimerEvent: {}
+[4.059466] (-) TimerEvent: {}
+[4.160801] (-) TimerEvent: {}
+[4.262006] (-) TimerEvent: {}
+[4.363132] (-) TimerEvent: {}
+[4.464359] (-) TimerEvent: {}
+[4.566076] (-) TimerEvent: {}
+[4.667268] (-) TimerEvent: {}
+[4.768464] (-) TimerEvent: {}
+[4.870353] (-) TimerEvent: {}
+[4.971656] (-) TimerEvent: {}
+[5.072773] (-) TimerEvent: {}
+[5.142725] (supa_bridge) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[5.172943] (-) TimerEvent: {}
+[5.259101] (supa_bridge) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[5.262867] (supa_bridge) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[5.265501] (supa_bridge) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[5.273040] (-) TimerEvent: {}
+[5.374562] (-) TimerEvent: {}
+[5.475946] (-) TimerEvent: {}
+[5.518940] (supa_bridge) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[5.576126] (-) TimerEvent: {}
+[5.677430] (-) TimerEvent: {}
+[5.778607] (-) TimerEvent: {}
+[5.879833] (-) TimerEvent: {}
+[5.981006] (-) TimerEvent: {}
+[6.082620] (-) TimerEvent: {}
+[6.184941] (-) TimerEvent: {}
+[6.288302] (-) TimerEvent: {}
+[6.389643] (-) TimerEvent: {}
+[6.491296] (-) TimerEvent: {}
+[6.592579] (-) TimerEvent: {}
+[6.693700] (-) TimerEvent: {}
+[6.795048] (-) TimerEvent: {}
+[6.886091] (supa_bridge) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[6.895178] (-) TimerEvent: {}
+[6.993839] (supa_bridge) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[6.997292] (-) TimerEvent: {}
+[6.998171] (supa_bridge) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[7.001443] (supa_bridge) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[7.097463] (-) TimerEvent: {}
+[7.111586] (supa_bridge) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[7.197657] (-) TimerEvent: {}
+[7.299258] (-) TimerEvent: {}
+[7.382251] (supa_bridge) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[7.399399] (-) TimerEvent: {}
+[7.500559] (-) TimerEvent: {}
+[7.602034] (-) TimerEvent: {}
+[7.703179] (-) TimerEvent: {}
+[7.804207] (-) TimerEvent: {}
+[7.905526] (-) TimerEvent: {}
+[8.006565] (-) TimerEvent: {}
+[8.078319] (supa_bridge) StdoutLine: {'line': b'-- Found rclcpp: 28.1.22 (/opt/ros/jazzy/share/rclcpp/cmake)\n'}
+[8.106699] (-) TimerEvent: {}
+[8.207748] (-) TimerEvent: {}
+[8.309018] (-) TimerEvent: {}
+[8.410481] (-) TimerEvent: {}
+[8.512044] (-) TimerEvent: {}
+[8.613870] (-) TimerEvent: {}
+[8.715445] (-) TimerEvent: {}
+[8.816742] (-) TimerEvent: {}
+[8.918414] (-) TimerEvent: {}
+[9.019929] (-) TimerEvent: {}
+[9.121632] (-) TimerEvent: {}
+[9.222779] (-) TimerEvent: {}
+[9.324629] (-) TimerEvent: {}
+[9.425625] (-) TimerEvent: {}
+[9.459292] (supa_bridge) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)\n'}
+[9.525787] (-) TimerEvent: {}
+[9.592002] (supa_bridge) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)\n'}
+[9.626039] (-) TimerEvent: {}
+[9.727865] (-) TimerEvent: {}
+[9.765924] (supa_bridge) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[9.828029] (-) TimerEvent: {}
+[9.929375] (-) TimerEvent: {}
+[9.942784] (supa_bridge) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[10.029560] (-) TimerEvent: {}
+[10.131312] (-) TimerEvent: {}
+[10.232475] (-) TimerEvent: {}
+[10.333801] (-) TimerEvent: {}
+[10.435451] (-) TimerEvent: {}
+[10.488186] (supa_bridge) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)\n'}
+[10.523285] (supa_bridge) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 8.4.4 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)\n'}
+[10.535584] (-) TimerEvent: {}
+[10.636866] (-) TimerEvent: {}
+[10.738364] (-) TimerEvent: {}
+[10.839871] (-) TimerEvent: {}
+[10.905552] (supa_bridge) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  \n'}
+[10.940079] (-) TimerEvent: {}
+[11.042031] (-) TimerEvent: {}
+[11.143937] (-) TimerEvent: {}
+[11.244850] (-) TimerEvent: {}
+[11.346041] (-) TimerEvent: {}
+[11.368789] (supa_bridge) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") \n'}
+[11.446251] (-) TimerEvent: {}
+[11.547558] (-) TimerEvent: {}
+[11.622005] (supa_bridge) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[11.647711] (-) TimerEvent: {}
+[11.748621] (-) TimerEvent: {}
+[11.849722] (-) TimerEvent: {}
+[11.951329] (-) TimerEvent: {}
+[12.052759] (-) TimerEvent: {}
+[12.154178] (-) TimerEvent: {}
+[12.255406] (-) TimerEvent: {}
+[12.303564] (supa_bridge) StdoutLine: {'line': b'-- Found std_msgs: 5.3.8 (/opt/ros/jazzy/share/std_msgs/cmake)\n'}
+[12.355581] (-) TimerEvent: {}
+[12.456889] (-) TimerEvent: {}
+[12.558223] (-) TimerEvent: {}
+[12.659692] (-) TimerEvent: {}
+[12.761266] (-) TimerEvent: {}
+[12.863190] (-) TimerEvent: {}
+[12.964761] (-) TimerEvent: {}
+[13.066191] (-) TimerEvent: {}
+[13.167640] (-) TimerEvent: {}
+[13.268823] (-) TimerEvent: {}
+[13.370836] (-) TimerEvent: {}
+[13.472924] (-) TimerEvent: {}
+[13.575408] (-) TimerEvent: {}
+[13.677090] (-) TimerEvent: {}
+[13.778753] (-) TimerEvent: {}
+[13.880108] (-) TimerEvent: {}
+[13.982015] (-) TimerEvent: {}
+[14.083904] (-) TimerEvent: {}
+[14.185512] (-) TimerEvent: {}
+[14.286716] (-) TimerEvent: {}
+[14.388711] (-) TimerEvent: {}
+[14.490269] (-) TimerEvent: {}
+[14.591909] (-) TimerEvent: {}
+[14.693989] (-) TimerEvent: {}
+[14.796115] (-) TimerEvent: {}
+[14.897701] (-) TimerEvent: {}
+[14.998990] (-) TimerEvent: {}
+[15.100461] (-) TimerEvent: {}
+[15.202057] (-) TimerEvent: {}
+[15.303617] (-) TimerEvent: {}
+[15.405864] (-) TimerEvent: {}
+[15.507710] (-) TimerEvent: {}
+[15.609309] (-) TimerEvent: {}
+[15.710675] (-) TimerEvent: {}
+[15.812173] (-) TimerEvent: {}
+[15.836264] (supa_bridge) StdoutLine: {'line': b'-- Found CURL: /usr/lib/x86_64-linux-gnu/libcurl.so (found version "8.5.0")  \n'}
+[15.903329] (supa_bridge) StdoutLine: {'line': b'-- Found nlohmann_json: /usr/share/cmake/nlohmann_json/nlohmann_jsonConfig.cmake (found version "3.11.3") \n'}
+[15.912501] (-) TimerEvent: {}
+[15.972630] (supa_bridge) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.17.5 (/opt/ros/jazzy/share/ament_lint_auto/cmake)\n'}
+[16.012709] (-) TimerEvent: {}
+[16.115024] (-) TimerEvent: {}
+[16.216607] (-) TimerEvent: {}
+[16.320504] (-) TimerEvent: {}
+[16.423624] (-) TimerEvent: {}
+[16.525867] (-) TimerEvent: {}
+[16.628809] (-) TimerEvent: {}
+[16.730554] (-) TimerEvent: {}
+[16.832348] (-) TimerEvent: {}
+[16.934033] (-) TimerEvent: {}
+[17.035271] (-) TimerEvent: {}
+[17.136659] (-) TimerEvent: {}
+[17.237668] (-) TimerEvent: {}
+[17.338700] (-) TimerEvent: {}
+[17.439954] (-) TimerEvent: {}
+[17.541452] (-) TimerEvent: {}
+[17.642979] (-) TimerEvent: {}
+[17.744564] (-) TimerEvent: {}
+[17.846124] (-) TimerEvent: {}
+[17.947488] (-) TimerEvent: {}
+[18.049383] (-) TimerEvent: {}
+[18.151294] (-) TimerEvent: {}
+[18.252734] (-) TimerEvent: {}
+[18.354705] (-) TimerEvent: {}
+[18.456332] (-) TimerEvent: {}
+[18.558009] (-) TimerEvent: {}
+[18.660257] (-) TimerEvent: {}
+[18.762966] (-) TimerEvent: {}
+[18.869409] (-) TimerEvent: {}
+[18.971969] (-) TimerEvent: {}
+[19.073426] (-) TimerEvent: {}
+[19.175167] (-) TimerEvent: {}
+[19.276471] (-) TimerEvent: {}
+[19.378100] (-) TimerEvent: {}
+[19.417096] (supa_bridge) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[19.422905] (supa_bridge) StdoutLine: {'line': b'-- Configured cppcheck include dirs: \n'}
+[19.428268] (supa_bridge) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[19.478276] (-) TimerEvent: {}
+[19.579580] (-) TimerEvent: {}
+[19.682242] (-) TimerEvent: {}
+[19.753388] (supa_bridge) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[19.757419] (supa_bridge) StdoutLine: {'line': b"-- Configured 'flake8' exclude dirs and/or files: \n"}
+[19.782508] (-) TimerEvent: {}
+[19.884189] (-) TimerEvent: {}
+[19.985400] (-) TimerEvent: {}
+[20.086589] (-) TimerEvent: {}
+[20.187895] (-) TimerEvent: {}
+[20.289402] (-) TimerEvent: {}
+[20.375780] (supa_bridge) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[20.389574] (-) TimerEvent: {}
+[20.491364] (-) TimerEvent: {}
+[20.594114] (-) TimerEvent: {}
+[20.696113] (-) TimerEvent: {}
+[20.798240] (-) TimerEvent: {}
+[20.821759] (supa_bridge) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[20.898583] (-) TimerEvent: {}
+[21.000322] (-) TimerEvent: {}
+[21.102152] (-) TimerEvent: {}
+[21.203841] (-) TimerEvent: {}
+[21.305505] (-) TimerEvent: {}
+[21.406792] (-) TimerEvent: {}
+[21.507964] (-) TimerEvent: {}
+[21.609551] (-) TimerEvent: {}
+[21.711284] (-) TimerEvent: {}
+[21.813010] (-) TimerEvent: {}
+[21.914754] (-) TimerEvent: {}
+[22.016470] (-) TimerEvent: {}
+[22.118094] (-) TimerEvent: {}
+[22.219712] (-) TimerEvent: {}
+[22.321384] (-) TimerEvent: {}
+[22.422844] (-) TimerEvent: {}
+[22.524493] (-) TimerEvent: {}
+[22.626127] (-) TimerEvent: {}
+[22.727668] (-) TimerEvent: {}
+[22.829035] (-) TimerEvent: {}
+[22.930802] (-) TimerEvent: {}
+[22.932419] (supa_bridge) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[22.935929] (supa_bridge) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[23.031356] (-) TimerEvent: {}
+[23.132877] (-) TimerEvent: {}
+[23.203950] (supa_bridge) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[23.233334] (-) TimerEvent: {}
+[23.335047] (-) TimerEvent: {}
+[23.377719] (supa_bridge) StdoutLine: {'line': b'-- Configuring done (23.1s)\n'}
+[23.435332] (-) TimerEvent: {}
+[23.536949] (-) TimerEvent: {}
+[23.638680] (-) TimerEvent: {}
+[23.740363] (-) TimerEvent: {}
+[23.841797] (-) TimerEvent: {}
+[23.865813] (supa_bridge) StdoutLine: {'line': b'-- Generating done (0.4s)\n'}
+[23.942216] (-) TimerEvent: {}
+[24.043994] (-) TimerEvent: {}
+[24.096965] (supa_bridge) StdoutLine: {'line': b'-- Build files have been written to: /mnt/d/doan2_realz/shit_for_git/ros2_ws/build/supa_bridge\n'}
+[24.126599] (supa_bridge) CommandEnded: {'returncode': 0}
+[24.134019] (supa_bridge) JobProgress: {'identifier': 'supa_bridge', 'progress': 'build'}
+[24.140870] (supa_bridge) Command: {'cmd': ['/usr/bin/cmake', '--build', '/mnt/d/doan2_realz/shit_for_git/ros2_ws/build/supa_bridge', '--', '-j12', '-l12'], 'cwd': '/mnt/d/doan2_realz/shit_for_git/ros2_ws/build/supa_bridge', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'soppo', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'WT_PROFILE_ID': '{61c54bbd-c2c6-5271-96e7-009a87ff44bf}', 'HOME': '/home/soppo', 'OLDPWD': '/mnt/d/doan2_realz/shit_for_git/ros2_ws/src', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'WSL_DISTRO_NAME': 'Ubuntu-24.04', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/soppo/ros2_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'soppo', 'NAME': 'LAPTOP-RM3J4MJ6', 'WSL_INTEROP': '/run/WSL/350_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files (x86)/VMware/VMware Workstation/bin/:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/java8path:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Cloudflare/Cloudflare WARP/:/mnt/d/nodejs/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files (x86)/STMicroelectronics/STM32 ST-LINK Utility/ST-LINK Utility:/mnt/c/Program Files/PuTTY/:/mnt/c/Program Files/usbipd-win/:/mnt/e/Qt/Tools/mingw1310_64/bin:/mnt/d/Git/cmd:/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/:/mnt/d/Xilinx/Vivado/2023.2/tps/mingw/9.3.0/win64.o/nt/bin:/mnt/c/Program Files/Tailscale/:/mnt/d/MATLAB/R2023a/runtime/win64:/mnt/d/MATLAB/R2023a/bin:/mnt/c/Users/PC/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/PC/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/PC/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/PC/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/PC/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/PC/AppData/Roaming/npm:/mnt/e/MiKTeX/miktex/bin/x64/:/mnt/c/Users/PC/.dotnet/tools:/mnt/d/Xilinx/Vivado/2023.2/tps/mingw/9.3.0/win64.o/nt/bin:/mnt/d/flutter/bin:/mnt/c/Program Files (x86)/Nmap:/mnt/c/msys64/ucrt64/bin:/snap/bin', 'WT_SESSION': '2e7a18ef-a242-4c54-9138-65da22e72892', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/home/soppo/ros2_ws/install/uart_ros2:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/mnt/d/doan2_realz/shit_for_git/ros2_ws/build/supa_bridge', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'CMAKE_PREFIX_PATH': '/home/soppo/ros2_ws/install/uart_ros2:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy', 'WSLENV': 'WT_SESSION:WT_PROFILE_ID:'}), 'shell': False}
+[24.144933] (-) TimerEvent: {}
+[24.246193] (-) TimerEvent: {}
+[24.350049] (-) TimerEvent: {}
+[24.452397] (-) TimerEvent: {}
+[24.470957] (supa_bridge) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/supa_bridge.dir/src/supa_bridge.cpp.o\x1b[0m\n'}
+[24.552792] (-) TimerEvent: {}
+[24.654608] (-) TimerEvent: {}
+[24.756680] (-) TimerEvent: {}
+[24.858509] (-) TimerEvent: {}
+[24.960720] (-) TimerEvent: {}
+[25.062906] (-) TimerEvent: {}
+[25.165104] (-) TimerEvent: {}
+[25.267614] (-) TimerEvent: {}
+[25.369693] (-) TimerEvent: {}
+[25.471470] (-) TimerEvent: {}
+[25.573300] (-) TimerEvent: {}
+[25.675753] (-) TimerEvent: {}
+[25.778671] (-) TimerEvent: {}
+[25.881652] (-) TimerEvent: {}
+[25.983681] (-) TimerEvent: {}
+[26.086572] (-) TimerEvent: {}
+[26.189130] (-) TimerEvent: {}
+[26.291163] (-) TimerEvent: {}
+[26.393350] (-) TimerEvent: {}
+[26.495234] (-) TimerEvent: {}
+[26.597247] (-) TimerEvent: {}
+[26.699309] (-) TimerEvent: {}
+[26.801755] (-) TimerEvent: {}
+[26.904234] (-) TimerEvent: {}
+[27.005778] (-) TimerEvent: {}
+[27.107694] (-) TimerEvent: {}
+[27.209943] (-) TimerEvent: {}
+[27.311955] (-) TimerEvent: {}
+[27.415170] (-) TimerEvent: {}
+[27.517026] (-) TimerEvent: {}
+[27.619137] (-) TimerEvent: {}
+[27.720923] (-) TimerEvent: {}
+[27.823118] (-) TimerEvent: {}
+[27.925269] (-) TimerEvent: {}
+[28.026754] (-) TimerEvent: {}
+[28.129336] (-) TimerEvent: {}
+[28.231938] (-) TimerEvent: {}
+[28.333951] (-) TimerEvent: {}
+[28.436261] (-) TimerEvent: {}
+[28.538562] (-) TimerEvent: {}
+[28.641029] (-) TimerEvent: {}
+[28.743460] (-) TimerEvent: {}
+[28.846850] (-) TimerEvent: {}
+[28.949352] (-) TimerEvent: {}
+[29.051632] (-) TimerEvent: {}
+[29.154018] (-) TimerEvent: {}
+[29.256218] (-) TimerEvent: {}
+[29.359760] (-) TimerEvent: {}
+[29.462483] (-) TimerEvent: {}
+[29.564487] (-) TimerEvent: {}
+[29.667017] (-) TimerEvent: {}
+[29.769627] (-) TimerEvent: {}
+[29.871869] (-) TimerEvent: {}
+[29.974200] (-) TimerEvent: {}
+[30.076140] (-) TimerEvent: {}
+[30.178671] (-) TimerEvent: {}
+[30.281309] (-) TimerEvent: {}
+[30.383543] (-) TimerEvent: {}
+[30.485800] (-) TimerEvent: {}
+[30.588260] (-) TimerEvent: {}
+[30.690605] (-) TimerEvent: {}
+[30.793467] (-) TimerEvent: {}
+[30.895890] (-) TimerEvent: {}
+[30.998024] (-) TimerEvent: {}
+[31.100738] (-) TimerEvent: {}
+[31.203206] (-) TimerEvent: {}
+[31.305670] (-) TimerEvent: {}
+[31.408043] (-) TimerEvent: {}
+[31.510253] (-) TimerEvent: {}
+[31.612843] (-) TimerEvent: {}
+[31.714938] (-) TimerEvent: {}
+[31.817371] (-) TimerEvent: {}
+[31.919375] (-) TimerEvent: {}
+[32.021530] (-) TimerEvent: {}
+[32.123551] (-) TimerEvent: {}
+[32.226522] (-) TimerEvent: {}
+[32.328947] (-) TimerEvent: {}
+[32.431516] (-) TimerEvent: {}
+[32.534309] (-) TimerEvent: {}
+[32.637242] (-) TimerEvent: {}
+[32.739338] (-) TimerEvent: {}
+[32.841281] (-) TimerEvent: {}
+[32.943372] (-) TimerEvent: {}
+[33.045764] (-) TimerEvent: {}
+[33.148231] (-) TimerEvent: {}
+[33.250401] (-) TimerEvent: {}
+[33.353096] (-) TimerEvent: {}
+[33.455689] (-) TimerEvent: {}
+[33.559461] (-) TimerEvent: {}
+[33.661528] (-) TimerEvent: {}
+[33.764102] (-) TimerEvent: {}
+[33.866643] (-) TimerEvent: {}
+[33.968473] (-) TimerEvent: {}
+[34.071264] (-) TimerEvent: {}
+[34.173863] (-) TimerEvent: {}
+[34.276613] (-) TimerEvent: {}
+[34.379129] (-) TimerEvent: {}
+[34.481622] (-) TimerEvent: {}
+[34.583844] (-) TimerEvent: {}
+[34.686330] (-) TimerEvent: {}
+[34.788915] (-) TimerEvent: {}
+[34.891437] (-) TimerEvent: {}
+[34.994032] (-) TimerEvent: {}
+[35.096331] (-) TimerEvent: {}
+[35.198806] (-) TimerEvent: {}
+[35.301289] (-) TimerEvent: {}
+[35.403699] (-) TimerEvent: {}
+[35.506030] (-) TimerEvent: {}
+[35.608185] (-) TimerEvent: {}
+[35.710491] (-) TimerEvent: {}
+[35.813021] (-) TimerEvent: {}
+[35.915447] (-) TimerEvent: {}
+[36.018203] (-) TimerEvent: {}
+[36.120134] (-) TimerEvent: {}
+[36.222411] (-) TimerEvent: {}
+[36.324653] (-) TimerEvent: {}
+[36.426583] (-) TimerEvent: {}
+[36.528432] (-) TimerEvent: {}
+[36.630396] (-) TimerEvent: {}
+[36.732619] (-) TimerEvent: {}
+[36.834634] (-) TimerEvent: {}
+[36.936424] (-) TimerEvent: {}
+[37.038137] (-) TimerEvent: {}
+[37.139762] (-) TimerEvent: {}
+[37.241330] (-) TimerEvent: {}
+[37.342709] (-) TimerEvent: {}
+[37.444812] (-) TimerEvent: {}
+[37.546437] (-) TimerEvent: {}
+[37.647458] (-) TimerEvent: {}
+[37.748887] (-) TimerEvent: {}
+[37.849945] (-) TimerEvent: {}
+[37.951185] (-) TimerEvent: {}
+[38.052482] (-) TimerEvent: {}
+[38.153849] (-) TimerEvent: {}
+[38.255332] (-) TimerEvent: {}
+[38.356296] (-) TimerEvent: {}
+[38.457522] (-) TimerEvent: {}
+[38.558835] (-) TimerEvent: {}
+[38.660926] (-) TimerEvent: {}
+[38.762376] (-) TimerEvent: {}
+[38.864248] (-) TimerEvent: {}
+[38.965500] (-) TimerEvent: {}
+[39.066846] (-) TimerEvent: {}
+[39.168677] (-) TimerEvent: {}
+[39.269870] (-) TimerEvent: {}
+[39.370918] (-) TimerEvent: {}
+[39.472301] (-) TimerEvent: {}
+[39.573732] (-) TimerEvent: {}
+[39.675009] (-) TimerEvent: {}
+[39.776297] (-) TimerEvent: {}
+[39.877679] (-) TimerEvent: {}
+[39.978913] (-) TimerEvent: {}
+[40.079981] (-) TimerEvent: {}
+[40.180984] (-) TimerEvent: {}
+[40.239760] (supa_bridge) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable supa_bridge\x1b[0m\n'}
+[40.281182] (-) TimerEvent: {}
+[40.382527] (-) TimerEvent: {}
+[40.483564] (-) TimerEvent: {}
+[40.584623] (-) TimerEvent: {}
+[40.685667] (-) TimerEvent: {}
+[40.786706] (-) TimerEvent: {}
+[40.888102] (-) TimerEvent: {}
+[40.989561] (-) TimerEvent: {}
+[41.090792] (-) TimerEvent: {}
+[41.192149] (-) TimerEvent: {}
+[41.293621] (-) TimerEvent: {}
+[41.395383] (-) TimerEvent: {}
+[41.496929] (-) TimerEvent: {}
+[41.598549] (-) TimerEvent: {}
+[41.700784] (-) TimerEvent: {}
+[41.803052] (-) TimerEvent: {}
+[41.905835] (-) TimerEvent: {}
+[42.010657] (-) TimerEvent: {}
+[42.112491] (-) TimerEvent: {}
+[42.214454] (-) TimerEvent: {}
+[42.315637] (-) TimerEvent: {}
+[42.417061] (-) TimerEvent: {}
+[42.519871] (-) TimerEvent: {}
+[42.621739] (-) TimerEvent: {}
+[42.722964] (-) TimerEvent: {}
+[42.824275] (-) TimerEvent: {}
+[42.925347] (-) TimerEvent: {}
+[43.026262] (-) TimerEvent: {}
+[43.127755] (-) TimerEvent: {}
+[43.229026] (-) TimerEvent: {}
+[43.330502] (-) TimerEvent: {}
+[43.432339] (-) TimerEvent: {}
+[43.534083] (-) TimerEvent: {}
+[43.635315] (-) TimerEvent: {}
+[43.736449] (-) TimerEvent: {}
+[43.837678] (-) TimerEvent: {}
+[43.938927] (-) TimerEvent: {}
+[44.040062] (-) TimerEvent: {}
+[44.141027] (-) TimerEvent: {}
+[44.242091] (-) TimerEvent: {}
+[44.343432] (-) TimerEvent: {}
+[44.444567] (-) TimerEvent: {}
+[44.545913] (-) TimerEvent: {}
+[44.647008] (-) TimerEvent: {}
+[44.748247] (-) TimerEvent: {}
+[44.849479] (-) TimerEvent: {}
+[44.950345] (-) TimerEvent: {}
+[45.051358] (-) TimerEvent: {}
+[45.152604] (-) TimerEvent: {}
+[45.253636] (-) TimerEvent: {}
+[45.354786] (-) TimerEvent: {}
+[45.455798] (-) TimerEvent: {}
+[45.556794] (-) TimerEvent: {}
+[45.658139] (-) TimerEvent: {}
+[45.759161] (-) TimerEvent: {}
+[45.860694] (-) TimerEvent: {}
+[45.961808] (-) TimerEvent: {}
+[46.063082] (-) TimerEvent: {}
+[46.163984] (-) TimerEvent: {}
+[46.265125] (-) TimerEvent: {}
+[46.366462] (-) TimerEvent: {}
+[46.467747] (-) TimerEvent: {}
+[46.568590] (-) TimerEvent: {}
+[46.669738] (-) TimerEvent: {}
+[46.770866] (-) TimerEvent: {}
+[46.871908] (-) TimerEvent: {}
+[46.956061] (supa_bridge) StdoutLine: {'line': b'[100%] Built target supa_bridge\n'}
+[46.972095] (-) TimerEvent: {}
+[46.998998] (supa_bridge) CommandEnded: {'returncode': 0}
+[47.023412] (supa_bridge) JobProgress: {'identifier': 'supa_bridge', 'progress': 'install'}
+[47.052041] (supa_bridge) Command: {'cmd': ['/usr/bin/cmake', '--install', '/mnt/d/doan2_realz/shit_for_git/ros2_ws/build/supa_bridge'], 'cwd': '/mnt/d/doan2_realz/shit_for_git/ros2_ws/build/supa_bridge', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'soppo', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'WT_PROFILE_ID': '{61c54bbd-c2c6-5271-96e7-009a87ff44bf}', 'HOME': '/home/soppo', 'OLDPWD': '/mnt/d/doan2_realz/shit_for_git/ros2_ws/src', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'WSL_DISTRO_NAME': 'Ubuntu-24.04', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/soppo/ros2_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'soppo', 'NAME': 'LAPTOP-RM3J4MJ6', 'WSL_INTEROP': '/run/WSL/350_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files (x86)/VMware/VMware Workstation/bin/:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/java8path:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Cloudflare/Cloudflare WARP/:/mnt/d/nodejs/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files (x86)/STMicroelectronics/STM32 ST-LINK Utility/ST-LINK Utility:/mnt/c/Program Files/PuTTY/:/mnt/c/Program Files/usbipd-win/:/mnt/e/Qt/Tools/mingw1310_64/bin:/mnt/d/Git/cmd:/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/:/mnt/d/Xilinx/Vivado/2023.2/tps/mingw/9.3.0/win64.o/nt/bin:/mnt/c/Program Files/Tailscale/:/mnt/d/MATLAB/R2023a/runtime/win64:/mnt/d/MATLAB/R2023a/bin:/mnt/c/Users/PC/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/PC/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/PC/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/PC/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/PC/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/PC/AppData/Roaming/npm:/mnt/e/MiKTeX/miktex/bin/x64/:/mnt/c/Users/PC/.dotnet/tools:/mnt/d/Xilinx/Vivado/2023.2/tps/mingw/9.3.0/win64.o/nt/bin:/mnt/d/flutter/bin:/mnt/c/Program Files (x86)/Nmap:/mnt/c/msys64/ucrt64/bin:/snap/bin', 'WT_SESSION': '2e7a18ef-a242-4c54-9138-65da22e72892', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/home/soppo/ros2_ws/install/uart_ros2:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/mnt/d/doan2_realz/shit_for_git/ros2_ws/build/supa_bridge', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'CMAKE_PREFIX_PATH': '/home/soppo/ros2_ws/install/uart_ros2:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy', 'WSLENV': 'WT_SESSION:WT_PROFILE_ID:'}), 'shell': False}
+[47.072320] (-) TimerEvent: {}
+[47.086227] (supa_bridge) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[47.113889] (supa_bridge) StdoutLine: {'line': b'-- Installing: /mnt/d/doan2_realz/shit_for_git/ros2_ws/install/supa_bridge/lib/supa_bridge/supa_bridge\n'}
+[47.172647] (-) TimerEvent: {}
+[47.275253] (-) TimerEvent: {}
+[47.376830] (-) TimerEvent: {}
+[47.479327] (-) TimerEvent: {}
+[47.581040] (-) TimerEvent: {}
+[47.682562] (-) TimerEvent: {}
+[47.783696] (-) TimerEvent: {}
+[47.884817] (-) TimerEvent: {}
+[47.986021] (-) TimerEvent: {}
+[48.004520] (supa_bridge) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/mnt/d/doan2_realz/shit_for_git/ros2_ws/install/supa_bridge/lib/supa_bridge/supa_bridge" to ""\n'}
+[48.059418] (supa_bridge) StdoutLine: {'line': b'-- Installing: /mnt/d/doan2_realz/shit_for_git/ros2_ws/install/supa_bridge/share/ament_index/resource_index/package_run_dependencies/supa_bridge\n'}
+[48.086249] (-) TimerEvent: {}
+[48.187435] (-) TimerEvent: {}
+[48.199298] (supa_bridge) StdoutLine: {'line': b'-- Installing: /mnt/d/doan2_realz/shit_for_git/ros2_ws/install/supa_bridge/share/ament_index/resource_index/parent_prefix_path/supa_bridge\n'}
+[48.287625] (-) TimerEvent: {}
+[48.305961] (supa_bridge) StdoutLine: {'line': b'-- Installing: /mnt/d/doan2_realz/shit_for_git/ros2_ws/install/supa_bridge/share/supa_bridge/environment/ament_prefix_path.sh\n'}
+[48.372949] (supa_bridge) StdoutLine: {'line': b'-- Installing: /mnt/d/doan2_realz/shit_for_git/ros2_ws/install/supa_bridge/share/supa_bridge/environment/ament_prefix_path.dsv\n'}
+[48.387900] (-) TimerEvent: {}
+[48.451845] (supa_bridge) StdoutLine: {'line': b'-- Installing: /mnt/d/doan2_realz/shit_for_git/ros2_ws/install/supa_bridge/share/supa_bridge/environment/path.sh\n'}
+[48.488130] (-) TimerEvent: {}
+[48.536782] (supa_bridge) StdoutLine: {'line': b'-- Installing: /mnt/d/doan2_realz/shit_for_git/ros2_ws/install/supa_bridge/share/supa_bridge/environment/path.dsv\n'}
+[48.588632] (-) TimerEvent: {}
+[48.648883] (supa_bridge) StdoutLine: {'line': b'-- Installing: /mnt/d/doan2_realz/shit_for_git/ros2_ws/install/supa_bridge/share/supa_bridge/local_setup.bash\n'}
+[48.688891] (-) TimerEvent: {}
+[48.731205] (supa_bridge) StdoutLine: {'line': b'-- Installing: /mnt/d/doan2_realz/shit_for_git/ros2_ws/install/supa_bridge/share/supa_bridge/local_setup.sh\n'}
+[48.789119] (-) TimerEvent: {}
+[48.814882] (supa_bridge) StdoutLine: {'line': b'-- Installing: /mnt/d/doan2_realz/shit_for_git/ros2_ws/install/supa_bridge/share/supa_bridge/local_setup.zsh\n'}
+[48.889356] (-) TimerEvent: {}
+[48.892545] (supa_bridge) StdoutLine: {'line': b'-- Installing: /mnt/d/doan2_realz/shit_for_git/ros2_ws/install/supa_bridge/share/supa_bridge/local_setup.dsv\n'}
+[48.976928] (supa_bridge) StdoutLine: {'line': b'-- Installing: /mnt/d/doan2_realz/shit_for_git/ros2_ws/install/supa_bridge/share/supa_bridge/package.dsv\n'}
+[48.989547] (-) TimerEvent: {}
+[49.091065] (-) TimerEvent: {}
+[49.117475] (supa_bridge) StdoutLine: {'line': b'-- Installing: /mnt/d/doan2_realz/shit_for_git/ros2_ws/install/supa_bridge/share/ament_index/resource_index/packages/supa_bridge\n'}
+[49.191234] (-) TimerEvent: {}
+[49.253249] (supa_bridge) StdoutLine: {'line': b'-- Installing: /mnt/d/doan2_realz/shit_for_git/ros2_ws/install/supa_bridge/share/supa_bridge/cmake/supa_bridgeConfig.cmake\n'}
+[49.291458] (-) TimerEvent: {}
+[49.344483] (supa_bridge) StdoutLine: {'line': b'-- Installing: /mnt/d/doan2_realz/shit_for_git/ros2_ws/install/supa_bridge/share/supa_bridge/cmake/supa_bridgeConfig-version.cmake\n'}
+[49.391750] (-) TimerEvent: {}
+[49.446388] (supa_bridge) StdoutLine: {'line': b'-- Installing: /mnt/d/doan2_realz/shit_for_git/ros2_ws/install/supa_bridge/share/supa_bridge/package.xml\n'}
+[49.491997] (-) TimerEvent: {}
+[49.524873] (supa_bridge) CommandEnded: {'returncode': 0}
+[49.592205] (-) TimerEvent: {}
+[49.693663] (-) TimerEvent: {}
+[49.795044] (-) TimerEvent: {}
+[49.896406] (-) TimerEvent: {}
+[49.998015] (-) TimerEvent: {}
+[50.099599] (-) TimerEvent: {}
+[50.200623] (-) TimerEvent: {}
+[50.272399] (supa_bridge) JobEnded: {'identifier': 'supa_bridge', 'rc': 0}
+[50.283741] (-) EventReactorShutdown: {}
