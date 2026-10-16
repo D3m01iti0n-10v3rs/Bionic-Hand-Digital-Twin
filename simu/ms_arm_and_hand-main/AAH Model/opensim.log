@@ -100,3 +100,90 @@
 [2026-10-15 21:15:35.487] [info] Loaded model RightArmAndHand_NoMuscles from file D:\doan2_realz\shit_for_git\simu\ms_arm_and_hand-main\AAH Model\RightArmAndHand_NoMuscles.osim
 [2026-10-15 21:15:40.924] [info] Updating Model file from 40000 to latest format...
 [2026-10-15 21:15:40.950] [info] Loaded model RightArmAndHand_NoMuscles from file D:\doan2_realz\shit_for_git\simu\ms_arm_and_hand-main\AAH Model\RightArmAndHand_NoMuscles.osim
+[2026-10-16 10:12:49.496] [info] Updating Model file from 40000 to latest format...
+[2026-10-16 10:12:49.533] [info] Loaded model RightArmAndHand_NoMuscles from file D:\doan2_realz\shit_for_git\simu\ms_arm_and_hand-main\AAH Model\RightArmAndHand_NoMuscles.osim
+[2026-10-16 10:12:55.532] [info] Updating Model file from 40000 to latest format...
+[2026-10-16 10:12:55.563] [info] Loaded model RightArmAndHand_NoMuscles from file D:\doan2_realz\shit_for_git\simu\ms_arm_and_hand-main\AAH Model\RightArmAndHand_NoMuscles.osim
+[2026-10-16 10:12:57.038] [warning] ForceSet 'forceset' has subcomponents with duplicate name 'expressionbasedcoordinateforce'. The duplicate is being renamed to 'expressionbasedcoordinateforce_0'.
+[2026-10-16 10:12:57.051] [warning] ForceSet 'forceset' has subcomponents with duplicate name 'expressionbasedcoordinateforce'. The duplicate is being renamed to 'expressionbasedcoordinateforce_1'.
+[2026-10-16 10:12:57.064] [warning] ForceSet 'forceset' has subcomponents with duplicate name 'expressionbasedcoordinateforce'. The duplicate is being renamed to 'expressionbasedcoordinateforce_2'.
+[2026-10-16 10:12:57.077] [warning] ForceSet 'forceset' has subcomponents with duplicate name 'expressionbasedcoordinateforce'. The duplicate is being renamed to 'expressionbasedcoordinateforce_3'.
+[2026-10-16 10:12:57.088] [warning] ForceSet 'forceset' has subcomponents with duplicate name 'expressionbasedcoordinateforce'. The duplicate is being renamed to 'expressionbasedcoordinateforce_4'.
+[2026-10-16 10:12:57.098] [warning] ForceSet 'forceset' has subcomponents with duplicate name 'expressionbasedcoordinateforce'. The duplicate is being renamed to 'expressionbasedcoordinateforce_5'.
+[2026-10-16 10:12:57.113] [warning] ForceSet 'forceset' has subcomponents with duplicate name 'expressionbasedcoordinateforce'. The duplicate is being renamed to 'expressionbasedcoordinateforce_6'.
+[2026-10-16 10:12:57.127] [warning] ForceSet 'forceset' has subcomponents with duplicate name 'expressionbasedcoordinateforce'. The duplicate is being renamed to 'expressionbasedcoordinateforce_7'.
+[2026-10-16 10:12:57.143] [warning] ForceSet 'forceset' has subcomponents with duplicate name 'expressionbasedcoordinateforce'. The duplicate is being renamed to 'expressionbasedcoordinateforce_8'.
+[2026-10-16 10:12:57.158] [warning] ForceSet 'forceset' has subcomponents with duplicate name 'expressionbasedcoordinateforce'. The duplicate is being renamed to 'expressionbasedcoordinateforce_9'.
+[2026-10-16 10:12:57.173] [warning] ForceSet 'forceset' has subcomponents with duplicate name 'expressionbasedcoordinateforce'. The duplicate is being renamed to 'expressionbasedcoordinateforce_10'.
+[2026-10-16 10:12:57.181] [warning] ForceSet 'forceset' has subcomponents with duplicate name 'expressionbasedcoordinateforce'. The duplicate is being renamed to 'expressionbasedcoordinateforce_11'.
+[2026-10-16 10:12:57.195] [warning] ForceSet 'forceset' has subcomponents with duplicate name 'expressionbasedcoordinateforce'. The duplicate is being renamed to 'expressionbasedcoordinateforce_12'.
+[2026-10-16 10:12:57.211] [warning] ForceSet 'forceset' has subcomponents with duplicate name 'expressionbasedcoordinateforce'. The duplicate is being renamed to 'expressionbasedcoordinateforce_13'.
+[2026-10-16 10:12:57.225] [warning] ForceSet 'forceset' has subcomponents with duplicate name 'expressionbasedcoordinateforce'. The duplicate is being renamed to 'expressionbasedcoordinateforce_14'.
+[2026-10-16 10:12:57.321] [info] -------
+[2026-10-16 10:12:57.321] [info] Manager
+[2026-10-16 10:12:57.322] [info] -------
+[2026-10-16 10:12:57.323] [info] Starting integration at initial time 0.00 s...
+[2026-10-16 10:14:20.951] [info] Updating Model file from 40000 to latest format...
+[2026-10-16 10:14:20.987] [info] Loaded model RightArmAndHand_NoMuscles from file D:\doan2_realz\shit_for_git\simu\ms_arm_and_hand-main\AAH Model\RightArmAndHand_NoMuscles.osim
+[2026-10-16 10:14:26.752] [info] Updating Model file from 40000 to latest format...
+[2026-10-16 10:14:26.781] [info] Loaded model RightArmAndHand_NoMuscles from file D:\doan2_realz\shit_for_git\simu\ms_arm_and_hand-main\AAH Model\RightArmAndHand_NoMuscles.osim
+[2026-10-16 10:14:28.100] [warning] ForceSet 'forceset' has subcomponents with duplicate name 'expressionbasedcoordinateforce'. The duplicate is being renamed to 'expressionbasedcoordinateforce_0'.
+[2026-10-16 10:14:28.109] [warning] ForceSet 'forceset' has subcomponents with duplicate name 'expressionbasedcoordinateforce'. The duplicate is being renamed to 'expressionbasedcoordinateforce_1'.
+[2026-10-16 10:14:28.119] [warning] ForceSet 'forceset' has subcomponents with duplicate name 'expressionbasedcoordinateforce'. The duplicate is being renamed to 'expressionbasedcoordinateforce_2'.
+[2026-10-16 10:14:28.130] [warning] ForceSet 'forceset' has subcomponents with duplicate name 'expressionbasedcoordinateforce'. The duplicate is being renamed to 'expressionbasedcoordinateforce_3'.
+[2026-10-16 10:14:28.137] [warning] ForceSet 'forceset' has subcomponents with duplicate name 'expressionbasedcoordinateforce'. The duplicate is being renamed to 'expressionbasedcoordinateforce_4'.
+[2026-10-16 10:14:28.149] [warning] ForceSet 'forceset' has subcomponents with duplicate name 'expressionbasedcoordinateforce'. The duplicate is being renamed to 'expressionbasedcoordinateforce_5'.
+[2026-10-16 10:14:28.156] [warning] ForceSet 'forceset' has subcomponents with duplicate name 'expressionbasedcoordinateforce'. The duplicate is being renamed to 'expressionbasedcoordinateforce_6'.
+[2026-10-16 10:14:28.165] [warning] ForceSet 'forceset' has subcomponents with duplicate name 'expressionbasedcoordinateforce'. The duplicate is being renamed to 'expressionbasedcoordinateforce_7'.
+[2026-10-16 10:14:28.172] [warning] ForceSet 'forceset' has subcomponents with duplicate name 'expressionbasedcoordinateforce'. The duplicate is being renamed to 'expressionbasedcoordinateforce_8'.
+[2026-10-16 10:14:28.182] [warning] ForceSet 'forceset' has subcomponents with duplicate name 'expressionbasedcoordinateforce'. The duplicate is being renamed to 'expressionbasedcoordinateforce_9'.
+[2026-10-16 10:14:28.189] [warning] ForceSet 'forceset' has subcomponents with duplicate name 'expressionbasedcoordinateforce'. The duplicate is being renamed to 'expressionbasedcoordinateforce_10'.
+[2026-10-16 10:14:28.198] [warning] ForceSet 'forceset' has subcomponents with duplicate name 'expressionbasedcoordinateforce'. The duplicate is being renamed to 'expressionbasedcoordinateforce_11'.
+[2026-10-16 10:14:28.205] [warning] ForceSet 'forceset' has subcomponents with duplicate name 'expressionbasedcoordinateforce'. The duplicate is being renamed to 'expressionbasedcoordinateforce_12'.
+[2026-10-16 10:14:28.214] [warning] ForceSet 'forceset' has subcomponents with duplicate name 'expressionbasedcoordinateforce'. The duplicate is being renamed to 'expressionbasedcoordinateforce_13'.
+[2026-10-16 10:14:28.221] [warning] ForceSet 'forceset' has subcomponents with duplicate name 'expressionbasedcoordinateforce'. The duplicate is being renamed to 'expressionbasedcoordinateforce_14'.
+[2026-10-16 10:14:28.262] [info] -------
+[2026-10-16 10:14:28.263] [info] Manager
+[2026-10-16 10:14:28.263] [info] -------
+[2026-10-16 10:14:28.263] [info] Starting integration at initial time 0.00 s...
+[2026-10-16 10:16:09.793] [info] Integration complete at final time 1.60 s.
+[2026-10-16 10:16:09.793] [info]  - CPU time elapsed: 100.812500 s
+[2026-10-16 10:16:09.793] [info]  - real time elapsed: 101.528216 s
+[2026-10-16 10:16:09.793] [info]  - ratio sim-to-real time: 0.016
+[2026-10-16 10:16:09.793] [info]  - integrator method: RungeKuttaMerson
+[2026-10-16 10:16:09.794] [info]  - number of realizations: 46868
+[2026-10-16 10:16:09.794] [info]  - number of steps taken / attempted: 8223 / 9661
+[2026-10-16 10:16:09.794] [info]  - number of projections: 0
+[2026-10-16 10:16:09.794] [info]  - number of iterations: 9661
+[2026-10-16 10:49:03.260] [info] Updating Model file from 40000 to latest format...
+[2026-10-16 10:49:03.288] [info] Loaded model RightArmAndHand_NoMuscles from file D:\doan2_realz\shit_for_git\simu\ms_arm_and_hand-main\AAH Model\RightArmAndHand_NoMuscles.osim
+[2026-10-16 10:49:09.322] [info] Updating Model file from 40000 to latest format...
+[2026-10-16 10:49:09.349] [info] Loaded model RightArmAndHand_NoMuscles from file D:\doan2_realz\shit_for_git\simu\ms_arm_and_hand-main\AAH Model\RightArmAndHand_NoMuscles.osim
+[2026-10-16 10:49:10.824] [warning] ForceSet 'forceset' has subcomponents with duplicate name 'expressionbasedcoordinateforce'. The duplicate is being renamed to 'expressionbasedcoordinateforce_0'.
+[2026-10-16 10:49:10.834] [warning] ForceSet 'forceset' has subcomponents with duplicate name 'expressionbasedcoordinateforce'. The duplicate is being renamed to 'expressionbasedcoordinateforce_1'.
+[2026-10-16 10:49:10.842] [warning] ForceSet 'forceset' has subcomponents with duplicate name 'expressionbasedcoordinateforce'. The duplicate is being renamed to 'expressionbasedcoordinateforce_2'.
+[2026-10-16 10:49:10.848] [warning] ForceSet 'forceset' has subcomponents with duplicate name 'expressionbasedcoordinateforce'. The duplicate is being renamed to 'expressionbasedcoordinateforce_3'.
+[2026-10-16 10:49:10.863] [warning] ForceSet 'forceset' has subcomponents with duplicate name 'expressionbasedcoordinateforce'. The duplicate is being renamed to 'expressionbasedcoordinateforce_4'.
+[2026-10-16 10:49:10.875] [warning] ForceSet 'forceset' has subcomponents with duplicate name 'expressionbasedcoordinateforce'. The duplicate is being renamed to 'expressionbasedcoordinateforce_5'.
+[2026-10-16 10:49:10.881] [warning] ForceSet 'forceset' has subcomponents with duplicate name 'expressionbasedcoordinateforce'. The duplicate is being renamed to 'expressionbasedcoordinateforce_6'.
+[2026-10-16 10:49:10.892] [warning] ForceSet 'forceset' has subcomponents with duplicate name 'expressionbasedcoordinateforce'. The duplicate is being renamed to 'expressionbasedcoordinateforce_7'.
+[2026-10-16 10:49:10.901] [warning] ForceSet 'forceset' has subcomponents with duplicate name 'expressionbasedcoordinateforce'. The duplicate is being renamed to 'expressionbasedcoordinateforce_8'.
+[2026-10-16 10:49:10.910] [warning] ForceSet 'forceset' has subcomponents with duplicate name 'expressionbasedcoordinateforce'. The duplicate is being renamed to 'expressionbasedcoordinateforce_9'.
+[2026-10-16 10:49:10.919] [warning] ForceSet 'forceset' has subcomponents with duplicate name 'expressionbasedcoordinateforce'. The duplicate is being renamed to 'expressionbasedcoordinateforce_10'.
+[2026-10-16 10:49:10.928] [warning] ForceSet 'forceset' has subcomponents with duplicate name 'expressionbasedcoordinateforce'. The duplicate is being renamed to 'expressionbasedcoordinateforce_11'.
+[2026-10-16 10:49:10.938] [warning] ForceSet 'forceset' has subcomponents with duplicate name 'expressionbasedcoordinateforce'. The duplicate is being renamed to 'expressionbasedcoordinateforce_12'.
+[2026-10-16 10:49:10.944] [warning] ForceSet 'forceset' has subcomponents with duplicate name 'expressionbasedcoordinateforce'. The duplicate is being renamed to 'expressionbasedcoordinateforce_13'.
+[2026-10-16 10:49:10.956] [warning] ForceSet 'forceset' has subcomponents with duplicate name 'expressionbasedcoordinateforce'. The duplicate is being renamed to 'expressionbasedcoordinateforce_14'.
+[2026-10-16 10:49:11.036] [info] -------
+[2026-10-16 10:49:11.036] [info] Manager
+[2026-10-16 10:49:11.037] [info] -------
+[2026-10-16 10:49:11.040] [info] Starting integration at initial time 0.00 s...
+[2026-10-16 10:50:42.675] [info] Integration complete at final time 1.60 s.
+[2026-10-16 10:50:42.675] [info]  - CPU time elapsed: 90.171875 s
+[2026-10-16 10:50:42.675] [info]  - real time elapsed: 91.622191 s
+[2026-10-16 10:50:42.676] [info]  - ratio sim-to-real time: 0.017
+[2026-10-16 10:50:42.676] [info]  - integrator method: RungeKuttaMerson
+[2026-10-16 10:50:42.676] [info]  - number of realizations: 41563
+[2026-10-16 10:50:42.676] [info]  - number of steps taken / attempted: 8030 / 8383
+[2026-10-16 10:50:42.676] [info]  - number of projections: 0
+[2026-10-16 10:50:42.676] [info]  - number of iterations: 8383

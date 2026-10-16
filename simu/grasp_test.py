@@ -194,8 +194,62 @@ QMAX = {'mcp': 90.0, 'pip': 100.0, 'dip': 70.0}                       # full-fis
 THUMB_C = [('ra_cmc1_f_e', 40.0), ('ra_cmc1_opp', 30.0), ('ra_mcp1_e_f', 35.0), ('ra_ip1_e_f', 60.0)]
 ROBOT_JOINTS = {dg: (('cmc', 'pip', 'ip') if dg == 'thumb' else ('mcp', 'pip', 'dip')) for dg in DIGITS}
 T_CLOSE, T_END, TAU0 = 1.0, 1.6, 0.06                                 # s closing, s total, N.m driving torque scale
+LIMIT_K, CONTACT_K, CONTACT_DISS, PER_PAD_CONTACT = 20.0, 1.0e6, 2.0, True   # joint-limit stiffness (N.m/rad), Hunt-Crossley k/dissipation, only pad<->object contact
+KEEP_PASSIVE = True                                                   # keep the model's own passive joint forces (ExpressionBasedCoordinateForce)
+INERTIA_MIN = 5e-5                                                    # kg.m^2 added to every body: real phalanx I~1e-7 vs joint damping -> 3 us time constant -> 7 us steps
+INTEG_ACC = 1e-2                                                      # OpenSim integrator accuracy (bigger = faster, rougher)
+MASS_SCALE = 1.0                                                      # inflate phalanx mass/inertia (regularises stiff integration)
 PAD_R, OBJ_MASS = 0.008, 0.1                                          # fingertip contact sphere radius (m), object mass (kg)
-PALM_SHIFT, PALM_OFFSET = 0.5, 0.012                                  # object centre: toward wrist (x MCP-line width), above MCP axes (m)
+PALM_SHIFT, PALM_OFFSET = 0.2, 0.012                                  # object centre: toward wrist (x MCP-line width), above MCP axes (m)
+
+
+import re as _re
+_MEMO = {}
+_BONE_CACHE = {}
+
+
+def _bone_pts(osim, body):
+    """Bone-mesh vertices (m) in the body frame. The AAH .osim has mass = 0 and mass_center = 0 for every body, so geometry
+    (fingertip, pad centres, inertia) has to come from the .vtp bone meshes instead."""
+    name = body.getName()
+    if name not in _BONE_CACHE:
+        mesh = osim.Mesh.safeDownCast(body.get_attached_geometry(0))
+        t = open(os.path.join(os.path.dirname(HUMAN_MODEL), 'Geometry', mesh.get_mesh_file())).read()
+        i = t.index('<Points>'); seg = t[i:t.index('</Points>', i)]
+        seg = seg[seg.index('>', seg.index('<DataArray')) + 1: seg.index('</DataArray>')]
+        sc = np.array([mesh.get_scale_factors().get(k) for k in range(3)])
+        _BONE_CACHE[name] = np.array(seg.split(), float).reshape(-1, 3) * sc
+    return _BONE_CACHE[name]
+
+
+def _bone_mass(name):
+    """Rough anthropometric segment masses (kg). Only the finger/thumb phalanges move here; everything else is locked."""
+    if _re.match(r'RA5P[2-5]$', name): return 0.008       # finger proximal phalanx
+    if _re.match(r'RA6M[2-5]$', name): return 0.004       # finger middle phalanx
+    if _re.match(r'RA7D[2-5]$', name): return 0.002       # finger distal phalanx
+    if name == 'RA5P1': return 0.008                      # thumb proximal
+    if name == 'RA6D1': return 0.004                      # thumb distal
+    return 0.02
+
+
+def _give_mass(osim, model):
+    """Give every body a non-zero mass, mass centre and inertia (from its bone mesh; point cloud covariance)."""
+    bs = model.updBodySet()
+    for i in range(bs.getSize()):
+        b = bs.get(i); ms = _bone_mass(b.getName())
+        try:
+            P = _bone_pts(osim, b); c = P.mean(0); C = np.cov((P - c).T)
+            I = ms * (np.trace(C) * np.eye(3) - C) + INERTIA_MIN * np.eye(3)
+            ms *= MASS_SCALE; b.setMass(ms); b.setMassCenter(osim.Vec3(*c))
+            b.setInertia(osim.Inertia(float(I[0, 0]), float(I[1, 1]), float(I[2, 2]), float(I[0, 1]), float(I[0, 2]), float(I[1, 2])))
+        except Exception:                                  # phantom bodies without a mesh
+            b.setMass(0.01); b.setInertia(osim.Inertia(max(1e-5, INERTIA_MIN), max(1e-5, INERTIA_MIN), max(1e-5, INERTIA_MIN)))
+
+
+def _bone_tip(osim, body):
+    """Bone vertex farthest from the body origin (joint) = distal end of the phalanx, in the body frame."""
+    P = _bone_pts(osim, body)
+    return P[int(np.argmax(np.linalg.norm(P, axis=1)))]
 
 
 def _robot_curves(T=8.0, hold=2.0):
@@ -234,7 +288,13 @@ def _robot_curves(T=8.0, hold=2.0):
 
 
 @functools.lru_cache(maxsize=None)
-def _human_setup():
+def _human_setup(*a, **k):
+    key = (a, tuple(sorted(k.items())))
+    if key not in _MEMO.setdefault('_human_setup', {}): _MEMO['_human_setup'][key] = __human_setup_impl(*a, **k)
+    return _MEMO['_human_setup'][key]
+
+
+def __human_setup_impl():
     """Open the OpenSim hand once: palm frame (from the 4 MCP joints) + robot free-hand curves."""
     try:
         import opensim as osim
@@ -250,10 +310,8 @@ def _human_setup():
         if rot: lo, hi = np.degrees(lo), np.degrees(hi)
         v = float(np.clip(deg, lo, hi)); c.setValue(state, float(np.radians(v)) if rot else v, False)
     def tip_of(dip_coord):
-        j = cs.get(dip_coord).getJoint(); c0 = v3(j.getChildFrame().getPositionInGround(state))
-        body = osim.Body.safeDownCast(j.getChildFrame().findBaseFrame())
-        com = v3(body.findStationLocationInGround(state, body.getMassCenter()))
-        return c0 + 2.0 * (com - c0)                                   # fingertip ~ 2 x distal COM from the joint
+        body = osim.Body.safeDownCast(cs.get(dip_coord).getJoint().getChildFrame().findBaseFrame())
+        return v3(body.findStationLocationInGround(state, osim.Vec3(*_bone_tip(osim, body))))      # real fingertip (bone mesh)
     def pose(n, r):
         for j in ('mcp', 'pip', 'dip'): setq(f'ra_{j}{n}_e_f', r * QMAX[j])
         model.realizePosition(state)
@@ -310,7 +368,19 @@ def _write_obj(path, shape, sz, center, u, nrm, vlat):
 
 
 @functools.lru_cache(maxsize=None)
-def _human_grasp(shape, size):
+def _human_grasp(*a, **k):
+    key = (a, tuple(sorted(k.items())))
+    if key not in _MEMO.setdefault('_human_grasp', {}):
+        import pickle, hashlib                                  # disk cache: invalidated by any edit to this file; delete _cache_*.pkl to force
+        tag = hashlib.md5((repr(key) + str(os.path.getmtime(os.path.abspath(__file__)))).encode()).hexdigest()[:10]
+        cp = os.path.join(HERE, f'_cache_human_{tag}.pkl')
+        if os.path.exists(cp): _MEMO['_human_grasp'][key] = pickle.load(open(cp, 'rb')); print('OpenSim: dung ket qua da luu', os.path.basename(cp))
+        else:
+            _MEMO['_human_grasp'][key] = __human_grasp_impl(*a, **k); pickle.dump(_MEMO['_human_grasp'][key], open(cp, 'wb'))
+    return _MEMO['_human_grasp'][key]
+
+
+def __human_grasp_impl(shape, size):
     """OpenSim forward-dynamics grasp of the biological hand. Returns time t, flexion (deg) per digit joint,
     and the servo-command trajectory the robot uses to imitate it."""
     S = _human_setup(); osim = S['osim']; u, nrm, vlat = S['u'], S['nrm'], S['vlat']
@@ -333,6 +403,11 @@ def _human_grasp(shape, size):
         tsign = best[1]
         stage = 'load model'
         model = osim.Model(HUMAN_MODEL); model.setGravity(osim.Vec3(0, 0, 0)); cs = model.getCoordinateSet()
+        _give_mass(osim, model)                  # the stock model is massless -> NaN accelerations without this
+        if not KEEP_PASSIVE:
+            fs = model.updForceSet()
+            for i_ in range(fs.getSize() - 1, -1, -1):
+                if fs.get(i_).getConcreteClassName() == 'ExpressionBasedCoordinateForce': fs.remove(i_)
         bset = model.getBodySet(); v3 = S['v3']
         stage = 'object body'
         r_obj = max(sz) / 2
@@ -349,26 +424,30 @@ def _human_grasp(shape, size):
             model.addContactGeometry(osim.ContactMesh(path, osim.Vec3(0, 0, 0), osim.Vec3(0, 0, 0), obj, 'obj_cg'))
         geoms.append('obj_cg')
         def body_of(coord): return bset.get(cs.get(coord).getJoint().getChildFrame().findBaseFrame().getName())
-        def add_pad(coord, k, name, scale):
-            b = body_of(coord); com = v3(b.get_mass_center())
-            model.addContactGeometry(osim.ContactSphere(PAD_R, osim.Vec3(*(scale * com)), b, name)); geoms.append(name)
+        def add_pad(coord, kind, name):
+            b = body_of(coord); P = _bone_pts(osim, b)
+            if kind == 'dist':                                 # sphere centre on the bone axis, 4 mm short of the bone tip
+                tip = _bone_tip(osim, b); loc = tip * (1.0 - 0.004 / np.linalg.norm(tip))
+            else: loc = P.mean(0)                              # middle of the bone
+            model.addContactGeometry(osim.ContactSphere(PAD_R, osim.Vec3(*loc), b, name)); geoms.append(name)
         for dg, n in FINGER_N.items():
-            add_pad(f'ra_dip{n}_e_f', 0, f'pad_{dg}_dist', 1.5); add_pad(f'ra_pip{n}_e_f', 0, f'pad_{dg}_mid', 1.0)
-            add_pad(f'ra_mcp{n}_e_f', 0, f'pad_{dg}_prox', 1.0)
-        add_pad('ra_ip1_e_f', 0, 'pad_thumb_dist', 1.5); add_pad('ra_mcp1_e_f', 0, 'pad_thumb_prox', 1.0)
+            add_pad(f'ra_dip{n}_e_f', 'dist', f'pad_{dg}_dist'); add_pad(f'ra_pip{n}_e_f', 'mid', f'pad_{dg}_mid')
+            add_pad(f'ra_mcp{n}_e_f', 'mid', f'pad_{dg}_prox')
+        add_pad('ra_ip1_e_f', 'dist', 'pad_thumb_dist'); add_pad('ra_mcp1_e_f', 'mid', 'pad_thumb_prox')
         palm = bset.get(S['cs'].get('ra_mcp3_e_f').getJoint().getParentFrame().findBaseFrame().getName())
         palm0 = S['model'].getBodySet().get(palm.getName())
         for i, (a, b) in enumerate(itertools.product((0.3, 0.6, 0.9), (-0.35, 0.0, 0.35))):
             pg = S['c_mcp'] - u * (a * S['width']) + vlat * (b * S['width']) + nrm * (PALM_OFFSET - 0.010)
             loc = v3(S['model'].getGround().findStationLocationInAnotherFrame(S['state'], osim.Vec3(*pg), palm0))
             model.addContactGeometry(osim.ContactSphere(0.010, osim.Vec3(*loc), palm, f'palm_{i}')); geoms.append(f'palm_{i}')
-        hc = osim.HuntCrossleyForce(); hc.setName('contact')
-        CP = getattr(osim, 'HuntCrossleyForce_ContactParameters', None) or osim.HuntCrossleyForce.ContactParameters
-        prm = CP()
-        for g_ in geoms: prm.addGeometry(g_)
-        prm.setStiffness(1.0e6); prm.setDissipation(2.0); prm.setStaticFriction(0.8)
-        prm.setDynamicFriction(0.6); prm.setViscousFriction(0.01); hc.addContactParameters(prm)
-        model.addForce(hc)
+        def _hc(name, gl):
+            hc = osim.HuntCrossleyForce(); hc.setName(name)
+            for g_ in gl: hc.addGeometry(g_)                 # OpenSim 4.x: parameters live directly on HuntCrossleyForce
+            hc.setStiffness(CONTACT_K); hc.setDissipation(CONTACT_DISS); hc.setStaticFriction(0.8)
+            hc.setDynamicFriction(0.6); hc.setViscousFriction(0.01); model.addForce(hc)
+        if PER_PAD_CONTACT:                                  # one force per pad: contact only pad<->object, never pad<->pad
+            for g_ in geoms[1:]: _hc('contact_' + g_, ['obj_cg', g_])
+        else: _hc('contact', geoms)
         stage = 'actuators'
         drive = [(f'ra_{j}{n}_e_f', QMAX[j], 1.0) for n in FINGER_N.values() for j in ('mcp', 'pip', 'dip')]
         drive += [(nm, q, float(s_)) for (nm, q), s_ in zip(THUMB_C, tsign)]
@@ -376,7 +455,7 @@ def _human_grasp(shape, size):
         for nm, q, s_ in drive:
             c = cs.get(nm); lo, hi = np.degrees(c.getRangeMin()), np.degrees(c.getRangeMax())
             tau = TAU0 * q / 100.0; b = tau * T_CLOSE / np.radians(q)
-            model.addForce(osim.CoordinateLimitForce(nm, float(hi), 20.0, float(lo), 20.0, 0.0, 2.0))
+            model.addForce(osim.CoordinateLimitForce(nm, float(hi), LIMIT_K, float(lo), LIMIT_K, 0.0, 2.0))
             model.addForce(osim.ExpressionBasedCoordinateForce(nm, f'-{b:.6f}*qdot'))
             act = osim.CoordinateActuator(nm); act.setName('act_' + nm); act.setOptimalForce(1.0)
             act.setMinControl(-10.0); act.setMaxControl(10.0); model.addForce(act); pc.addActuator(act)
@@ -392,7 +471,7 @@ def _human_grasp(shape, size):
             if c.getName() not in names and not c.getName().startswith('obj_free') and not c.isConstrained(state):
                 c.setLocked(state, True)
         stage = 'integrate'
-        manager = osim.Manager(model); manager.setIntegratorAccuracy(1e-3)
+        manager = osim.Manager(model); manager.setIntegratorAccuracy(INTEG_ACC)
         state.setTime(0.0); manager.initialize(state); manager.integrate(T_END)
         stage = 'read results'
         traj = rep.getStates(); nst = traj.getSize()
@@ -401,6 +480,17 @@ def _human_grasp(shape, size):
             st = traj.get(i); model.realizePosition(st); t[i] = st.getTime()
             for nm in names:
                 c = cs.get(nm); val[nm][i] = np.degrees(c.getValue(st)) if c.getMotionType() == 1 else c.getValue(st)
+        if os.environ.get('GRASP_DEBUG'):
+            print('t   obj_disp_mm(x y z)   nearest-gap-mm pad  | gaps of dist pads')
+            for i in range(0, nst, max(1, nst // 16)):
+                st = traj.get(i); model.realizePosition(st); op = v3(obj.getPositionInGround(st)); gp = {}
+                for g_ in geoms[1:]:
+                    cg = osim.ContactSphere.safeDownCast(model.getContactGeometrySet().get(g_))
+                    pp = v3(cg.getFrame().findStationLocationInGround(st, cg.get_location()))
+                    gp[g_] = (np.linalg.norm(pp - op) - PAD_R - sz[0] / 2) * 1000 if shape == 'sphere' else float('nan')
+                nm_ = min(gp, key=gp.get)
+                dd_ = (op - center) * 1000; print(f"   u/lat/nrm = {dd_ @ u:6.1f} {dd_ @ vlat:6.1f} {dd_ @ nrm:6.1f}", end=' ')
+                print(f"{st.getTime():.2f} {(op - center)[0]*1000:7.1f}{(op - center)[1]*1000:7.1f}{(op - center)[2]*1000:7.1f}   {gp[nm_]:7.1f} {nm_:<16}| " + ' '.join(f"{gp[k]:.0f}" for k in gp if k.endswith('dist')))
         end = traj.get(nst - 1); model.realizePosition(end)
         obj_end = v3(obj.getPositionInGround(end))
     except Exception as e:
